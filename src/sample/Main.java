@@ -1,6 +1,6 @@
 package sample;
 
-import Classes.Block;
+import main.Classes.Block;
 
 import java.util.Scanner;
 
@@ -18,7 +18,7 @@ public class Main {
     public static void main(String[] args) {
         // launch(args);
         double length;
-        double widht;
+        double width;
         double height;
         double content;
 
@@ -28,14 +28,14 @@ public class Main {
 
         System.out.println("Wat is de breete?");
         scan = new Scanner(System.in);
-        widht = Double.valueOf(scan.nextLine());
+        width = Double.valueOf(scan.nextLine());
 
         System.out.println("Wat is de hoogte?");
         scan = new Scanner(System.in);
         height = Double.valueOf(scan.nextLine());
 
-        Block block = new Block(length, widht, height);
-        content = block.calculateContent(length, widht, height);
+        Block block = new Block(length, width, height);
+        content = block.calculateContent(length, width, height);
 
         System.out.println(content);
     }
