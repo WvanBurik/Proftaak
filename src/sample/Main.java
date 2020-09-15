@@ -20,6 +20,7 @@ public class Main {
         double length;
         double widht;
         double height;
+        double content;
 
         System.out.println("Wat is de lengte?");
         Scanner scan = new Scanner(System.in);
@@ -34,6 +35,8 @@ public class Main {
         height = Double.valueOf(scan.nextLine());
 
         Block block = new Block(length, widht, height);
-        System.out.println(block);
+        content = block.calculateContent(length, widht, height);
+
+        System.out.println(content);
     }
 }

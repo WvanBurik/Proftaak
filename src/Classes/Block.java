@@ -10,8 +10,20 @@ public class Block extends Figure {
         this.length     = length;
         this.width      = width;
         this.height     = height;
-        this.content    = length * width * height;
     }
+
+//    @Override
+//    public double calculateContent(double ... value) {
+////        content = value[0];
+////
+////        for(int i = 1; i < value.length; i++) {
+////            this.content = content * value[i];
+////        }
+//
+//   //    this.content = length * width * height;
+//
+//        return content;
+//    }
 
     @Override
     public String toString() {
