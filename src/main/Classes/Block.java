@@ -1,5 +1,7 @@
 package main.Classes;
 
+import java.util.Scanner;
+
 public class Block extends Figure {
 
     double length;
@@ -12,21 +14,46 @@ public class Block extends Figure {
         this.height     = height;
     }
 
-//    @Override
-//    public double calculateContent(double ... value) {
-////        content = value[0];
-////
-////        for(int i = 1; i < value.length; i++) {
-////            this.content = content * value[i];
-////        }
-//
-//   //    this.content = length * width * height;
-//
-//        return content;
-//    }
+    public Block() {
+    }
 
     @Override
     public String toString() {
-        return "content=" + content;
+        return "Block{" +
+                "length=" + length +
+                ", width=" + width +
+                ", height=" + height +
+                ", content=" + content +
+                '}';
+    }
+
+    public void createBlock() {
+        //Create block
+        System.out.println("Create block");
+    }
+
+    public String calculateContentTEST() {
+        double length;
+        double width;
+        double height;
+        double content;
+
+        System.out.println("Wat is de lengte?");
+        Scanner scan = new Scanner(System.in);
+        length = Double.valueOf(scan.nextLine());
+
+        System.out.println("Wat is de breete?");
+        scan = new Scanner(System.in);
+        width = Double.valueOf(scan.nextLine());
+
+        System.out.println("Wat is de hoogte?");
+        scan = new Scanner(System.in);
+        height = Double.valueOf(scan.nextLine());
+
+        Block block = new Block(length, width, height);
+        content = block.calculateContent(length, width, height);
+
+        System.out.println(content);
+        return "" + content;
     }
 }
