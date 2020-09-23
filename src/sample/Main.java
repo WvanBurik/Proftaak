@@ -13,6 +13,7 @@ public class Main {
 //        primaryStage.setScene(new Scene(root, 300, 275));
 //        primaryStage.show();
 //    }
+    // Hier zet ik een comment om te testen of alles werkt
 
 
     public static void main(String[] args) {
