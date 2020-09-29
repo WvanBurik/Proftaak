@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Block extends Figure {
 
-    double length;
-    double width;
-    double height;
+    private double length;
+    private double width;
+    private double height;
 
     public Block(double length, double width, double height) {
         this.length     = length;
@@ -17,24 +17,10 @@ public class Block extends Figure {
     public Block() {
     }
 
-    @Override
-    public String toString() {
-        return "Block{" +
-                "length=" + length +
-                ", width=" + width +
-                ", height=" + height +
-                ", content=" + volume +
-                '}';
-    }
 
     @Override
     public String getType() {
         return "Block";
-    }
-
-    public void createBlock() {
-        //Create block
-        System.out.println("Create block");
     }
 
     public double getLength() {
@@ -47,6 +33,21 @@ public class Block extends Figure {
 
     public double getHeight() {
         return height;
+    }
+
+    public void createBlock() {
+        //Create figure and go to interface implemented java class to insert record to database.
+        System.out.println("Create block");
+    }
+
+    @Override
+    public String toString() {
+        return "Block{" +
+                "length=" + length +
+                ", width=" + width +
+                ", height=" + height +
+                ", content=" + volume +
+                '}';
     }
 
     public String calculateContentTEST() {
