@@ -8,12 +8,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 //import javafx.scene.control.Label;
-import main.Classes.Block;
-import main.Classes.Cilinder;
-import main.Classes.Circle;
-import main.Classes.Figure;
-
-import java.util.ArrayList;
+import main.Classes.*;
 
 public class Main extends Application {
 
@@ -21,7 +16,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         Block block = new Block();
         Cilinder cilinder = new Cilinder();
-        Circle circle = new Circle();
+        Sphere sphere = new Sphere();
 
 //        ArrayList<Figure> figures = new ArrayList<Figure>();
 //        figures.add(block);
@@ -31,7 +26,7 @@ public class Main extends Application {
 
         ComboBox comboBox = new ComboBox();
         comboBox.getItems().add("Cilinder");
-        comboBox.getItems().add("Circle");
+        comboBox.getItems().add("Sphere");
         comboBox.getItems().add("Block");
 
         HBox hbox = new HBox(comboBox);
@@ -50,26 +45,52 @@ public class Main extends Application {
     }
 
 
+//    public static void main(String[] args) {
+//        launch(args);
+//        Block block = new Block();
+//        Cilinder cilinder = new Cilinder();
+//        Sphere sphere = new Sphere();
+//        Figure figure = new Figure();
+//
+//
+//
+//        figure.createFigure(sphere);
+//    }
+
     public static void main(String[] args) {
-        launch(args);
-        Block block = new Block();
-        Cilinder cilinder = new Cilinder();
-        Circle circle = new Circle();
         Figure figure = new Figure();
+        Block block = new Block();
+        Sphere sphere = new Sphere();
+        Cilinder cilinder = new Cilinder();
+        Pyramid pyramid = new Pyramid();
+        Hemisphere hemisphere = new Hemisphere();
 
+        double figureVolume, blockVolume, sphereVolume, cilinderVolume, pyramidVolume, hemisphereVolume;
 
+        hemisphereVolume = hemisphere.calculateVolume(8);
+        System.out.println("volume of " + hemisphere.getType() + " is : " + hemisphereVolume);
 
-        figure.createFigure(circle);
+        sphereVolume = sphere.calculateVolume(48);
+        System.out.println("volume of " + sphere.getType() + " is : " + sphereVolume);
+
+        pyramidVolume = pyramid.calculateVolume(9, 10);
+        System.out.println("volume of " + pyramid.getType() + " is : " + pyramidVolume);
+
+        cilinderVolume = cilinder.calculateVolume(38, 35);
+        System.out.println("volume of " + cilinder.getType() + " is : " + cilinderVolume);
+
+        blockVolume = block.calculateVolume(5.5, 5.5, 5.5);
+        System.out.println("volume of " + block.getType() + " is : " + blockVolume);
     }
 
 //    public static void main(String[] args) {
 //        Figure figure = new Figure();
 //        Block block = new Block(5, 5, 5);
 //        Cilinder cilinder = new Cilinder();
-//        Circle circle = new Circle(4);
+//        Sphere sphere = new Sphere(4);
 //
 //        System.out.println(block.calculateVolume(block.getHeight(), block.getLength(), block.getWidth()));
-//        System.out.println(circle.calculateVolume(circle.getRadius()));
+//        System.out.println(sphere.calculateVolume(sphere.getRadius()));
 //        System.out.println(block.getType());
 //
 //    }

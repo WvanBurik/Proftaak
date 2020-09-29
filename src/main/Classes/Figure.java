@@ -1,14 +1,27 @@
 package main.Classes;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Arrays;
 
 public class Figure {
-    double volume;
-    String type;
+
+    protected double volume;
+    protected String type;
+    private ArrayList<Figure> figures;
 
     public String getType() {
         return type;
+    }
+
+    public Figure() {
+        figures = new ArrayList<>();
+    }
+
+    public void addFigures(Figure figure) {
+        //TODO check if method is required;
+        //Might be used to bulk save all records to database;
+        //First add all figures to array -> then send array to DAB
+        this.figures.addAll(Arrays.asList(figure));
     }
 
     //Calculate method for each child class.
@@ -31,7 +44,7 @@ public class Figure {
         //Create a new figure
         Block block = new Block();
         Cilinder cilinder = new Cilinder();
-        Circle circle = new Circle();
+        Sphere sphere = new Sphere();
 
         //Test to see if figure has a specified figure type to create.
         System.out.println("Figure.createFigure figuur klasse is " + figure.toString());
@@ -40,8 +53,8 @@ public class Figure {
             block.createBlock();
         } else if (figure.toString().equals(cilinder.toString())) {
             cilinder.createCilinder();
-        } else if (figure.toString().equals(circle.toString())) {
-            circle.createCircle();
+        } else if (figure.toString().equals(sphere.toString())) {
+            sphere.createSphere();
         }
 
 //        switch(figure.toString()) {
@@ -68,7 +81,6 @@ public class Figure {
     public double calculateTotalContent() {
         //Select * from database
         // Elk record volume bij elkaar optellen.
-
 
         //Eerst huidig record naar database opslaan voor je alles ophaald en berekend.
         return 0.0;
