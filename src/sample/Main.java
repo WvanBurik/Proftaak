@@ -13,6 +13,8 @@ import main.Classes.Cilinder;
 import main.Classes.Circle;
 import main.Classes.Figure;
 
+import java.util.ArrayList;
+
 public class Main extends Application {
 
     @Override
@@ -28,9 +30,9 @@ public class Main extends Application {
         primaryStage.setTitle("Hello World");
 
         ComboBox comboBox = new ComboBox();
-        comboBox.getItems().add(block);
-        comboBox.getItems().add(cilinder);
-        comboBox.getItems().add(circle);
+        comboBox.getItems().add("Cilinder");
+        comboBox.getItems().add("Circle");
+        comboBox.getItems().add("Block");
 
         HBox hbox = new HBox(comboBox);
 
@@ -55,8 +57,23 @@ public class Main extends Application {
         Circle circle = new Circle();
         Figure figure = new Figure();
 
+
+
         figure.createFigure(circle);
     }
+
+//    public static void main(String[] args) {
+//        Figure figure = new Figure();
+//        Block block = new Block(5, 5, 5);
+//        Cilinder cilinder = new Cilinder();
+//        Circle circle = new Circle(4);
+//
+//        System.out.println(block.calculateVolume(block.getHeight(), block.getLength(), block.getWidth()));
+//        System.out.println(circle.calculateVolume(circle.getRadius()));
+//        System.out.println(block.getType());
+//
+//    }
+
 //
 //public String calculateContentTEST() {
 //    double length;

@@ -23,13 +23,30 @@ public class Block extends Figure {
                 "length=" + length +
                 ", width=" + width +
                 ", height=" + height +
-                ", content=" + content +
+                ", content=" + volume +
                 '}';
+    }
+
+    @Override
+    public String getType() {
+        return "Block";
     }
 
     public void createBlock() {
         //Create block
         System.out.println("Create block");
+    }
+
+    public double getLength() {
+        return length;
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public double getHeight() {
+        return height;
     }
 
     public String calculateContentTEST() {
@@ -51,7 +68,7 @@ public class Block extends Figure {
         height = Double.valueOf(scan.nextLine());
 
         Block block = new Block(length, width, height);
-        content = block.calculateContent(length, width, height);
+        content = block.calculateVolume(length, width, height);
 
         System.out.println(content);
         return "" + content;
