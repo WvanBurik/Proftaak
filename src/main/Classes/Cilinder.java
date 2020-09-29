@@ -5,6 +5,11 @@ public class Cilinder extends Figure {
     double height;
     double radius;
 
+    @Override
+    public String getType() {
+        return "Cilinder";
+    }
+
     public Cilinder(double height, double radius) {
         this.height = height;
         this.radius = radius;
@@ -23,7 +28,7 @@ public class Cilinder extends Figure {
         return "Cilinder{" +
                 "height=" + height +
                 ", radius=" + radius +
-                ", content=" + content +
+                ", content=" + volume +
                 '}';
     }
 }

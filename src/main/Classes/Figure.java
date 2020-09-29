@@ -1,20 +1,25 @@
 package main.Classes;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class Figure {
-    double content;
-//    private Block block = new Block();
-//    private Cilinder cilinder = new Cilinder();
-//    private Circle circle = new Circle();
+    double volume;
+    String type;
+
+    public String getType() {
+        return type;
+    }
 
     //Calculate method for each child class.
-    public double calculateContent(double... value) {
-        content = value[0];
+    public double calculateVolume(double... value) {
+        volume = value[0];
 
         for (int i = 1; i < value.length; i++) {
-            this.content = content * value[i];
+            this.volume = volume * value[i];
         }
 
-        return content;
+        return volume;
     }
 
     public Figure loadFigure() {
@@ -61,7 +66,11 @@ public class Figure {
     }
 
     public double calculateTotalContent() {
-        //Haal alle inhoud op en tel deze bij elkaar op.
+        //Select * from database
+        // Elk record volume bij elkaar optellen.
+
+
+        //Eerst huidig record naar database opslaan voor je alles ophaald en berekend.
         return 0.0;
     }
 }
