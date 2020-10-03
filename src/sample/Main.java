@@ -10,6 +10,8 @@ import javafx.stage.Stage;
 //import javafx.scene.control.Label;
 import main.Classes.*;
 
+import java.sql.SQLException;
+
 public class Main extends Application {
 
     @Override
@@ -57,7 +59,7 @@ public class Main extends Application {
 //        figure.createFigure(sphere);
 //    }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException, ClassNotFoundException {
         Figure figure = new Figure();
         Block block = new Block();
         Sphere sphere = new Sphere();
@@ -81,6 +83,8 @@ public class Main extends Application {
 
         blockVolume = block.calculateVolume(5.5, 5.5, 5.5);
         System.out.println("volume of " + block.getType() + " is : " + blockVolume);
+
+        BlockDAO.insertBlock(5.5, 5.5, 5.5);
     }
 
 //    public static void main(String[] args) {
