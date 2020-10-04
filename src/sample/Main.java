@@ -11,6 +11,8 @@ import javafx.stage.Stage;
 import main.Classes.*;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.UUID;
 
 public class Main extends Application {
 
@@ -84,7 +86,12 @@ public class Main extends Application {
         blockVolume = block.calculateVolume(5.5, 5.5, 5.5);
         System.out.println("volume of " + block.getType() + " is : " + blockVolume);
 
-        BlockDAO.insertBlock(5.5, 5.5, 5.5);
+//        BlockDAO.insertBlock(2, 5.5, 5.5);
+//        BlockDAO.deleteAllBlocks();
+        ArrayList<Block> blocks = BlockDAO.readAllBlocks();
+        for (Block b : blocks) {
+            System.out.println(b.toString());
+        }
     }
 
 //    public static void main(String[] args) {
