@@ -76,9 +76,9 @@ public class DBUtil {
 ////            crs = new CachedRowSet();
 //            //crs.populate(rs);
 //        }
-                    dbConnect();
-            stmt = connection.createStatement();
-            rs = stmt.executeQuery(sqlQuery);
+        dbConnect();
+        stmt = connection.createStatement();
+        rs = stmt.executeQuery(sqlQuery);
         return rs;
 //        catch (SQLException e) {
 //            System.out.println("Error occurred in dbExecute operation " + e);
