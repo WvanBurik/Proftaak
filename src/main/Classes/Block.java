@@ -46,7 +46,6 @@ public class Block extends Figure {
                 "length=" + length +
                 ", width=" + width +
                 ", height=" + height +
-                ", content=" + volume +
                 '}';
     }
 
