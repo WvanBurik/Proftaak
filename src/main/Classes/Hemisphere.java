@@ -32,4 +32,11 @@ public class Hemisphere extends Figure {
 
         return (4.0/3.0) * pi * (radiusForVolume *radiusForVolume * radiusForVolume) / 2;
     }
+
+    @Override
+    public String toString() {
+        return "Hemisphere{" +
+                "radius=" + radius + '}';
+    }
+
 }

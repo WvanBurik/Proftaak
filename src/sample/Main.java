@@ -102,12 +102,15 @@ public class Main extends Application {
 //        }
 
         //Cilinder
-        CilinderDAO.insertCilinder( 19, 17.5);
+//        CilinderDAO.insertCilinder( 19, 17.5);
 //        CilinderDAO.deleteAllCilinders();
-        ArrayList<Cilinder> cilinders = CilinderDAO.readAllCilinders();
-        for (Cilinder c : cilinders) {
-            System.out.println(c.toString());
+
+        ArrayList<Figure> figures = FigureDAO.readAllFigures();
+        for (Figure f : figures) {
+            System.out.println(f.toString());
         }
+
+//        System.out.println(figure.calculateTotalContent());
     }
 
 //    public static void main(String[] args) {
