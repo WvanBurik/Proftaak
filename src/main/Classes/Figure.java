@@ -1,5 +1,6 @@
 package main.Classes;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -78,9 +79,16 @@ public class Figure {
         //May be deleted.
     }
 
-    public double calculateTotalContent() {
+    //TODO Fix problems
+    //Under construction
+    public double calculateTotalContent() throws SQLException, ClassNotFoundException {
         //Select * from database
         // Elk record volume bij elkaar optellen.
+        ArrayList<Figure> figures = FigureDAO.readAllFigures();
+        for (Figure f : figures) {
+            f.calculateVolume();
+            System.out.println(f.toString() + f.volume);
+        }
 
         //Eerst huidig record naar database opslaan voor je alles ophaald en berekend.
         return 0.0;
