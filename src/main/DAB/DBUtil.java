@@ -24,7 +24,7 @@ public class DBUtil {
         System.out.println("JDBC Driver has been registered!");
 
         try {
-            connection = DriverManager.getConnection(connStr, "root", "root");
+            connection = DriverManager.getConnection(connStr, "root", "");
         }
         catch (SQLException e){
             System.out.println("Connection Failed! Check output Console " + e);

@@ -50,7 +50,7 @@ public class Block extends Figure {
                 '}';
     }
 
-    public String calculateContentTEST() {
+    public String calculateVolume() {
         double length;
         double width;
         double height;
