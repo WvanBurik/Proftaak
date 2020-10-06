@@ -9,7 +9,7 @@ public class DBUtil {
 
     private static Connection connection = null;
 
-    private static final String connStr = "jdbc:mysql://localhost/proftaak";
+    private static final String connStr = "jdbc:mysql://localhost/proftaak?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 
     //Connect database;
     public static void dbConnect() throws SQLException, ClassNotFoundException {
@@ -69,27 +69,31 @@ public class DBUtil {
         ResultSet rs = null;
         CachedRowSet crs = null;
 
-        try {
-            dbConnect();
-            stmt = connection.createStatement();
-            rs = stmt.executeQuery(sqlQuery);
-//            crs = new CachedRowSet();
-            crs.populate(rs);
-        }
-        catch (SQLException e) {
-            System.out.println("Error occurred in dbExecute operation " + e);
-            throw e;
-        }
-        finally {
-            if (rs != null) {
-                rs.close();
-            }
-            if (stmt != null) {
-                stmt.close();
-            }
-            dbDisconnect();
-        }
-        return crs;
+//        try {
+//            dbConnect();
+//            stmt = connection.createStatement();
+//            rs = stmt.executeQuery(sqlQuery);
+////            crs = new CachedRowSet();
+//            //crs.populate(rs);
+//        }
+        dbConnect();
+        stmt = connection.createStatement();
+        rs = stmt.executeQuery(sqlQuery);
+        return rs;
+//        catch (SQLException e) {
+//            System.out.println("Error occurred in dbExecute operation " + e);
+//            throw e;
+//        }
+//        finally {
+//            if (rs != null) {
+//                rs.close();
+//            }
+//            if (stmt != null) {
+//                stmt.close();
+//            }
+//            dbDisconnect();
+//        }
+//        return rs;
 
     }
 }

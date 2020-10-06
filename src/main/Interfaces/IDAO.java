@@ -6,6 +6,8 @@ public interface IDAO {
 
     public abstract void deleteFigure();
 
+    public abstract void deleteFigures();
+
     public abstract void readFigure();
 
     public abstract void readFigures();

@@ -11,6 +11,8 @@ import javafx.stage.Stage;
 import main.Classes.*;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.UUID;
 
 public class Main extends Application {
 
@@ -26,10 +28,13 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Hello World");
 
+        ArrayList<Block> blocks = BlockDAO.readAllBlocks();
+
+
         ComboBox comboBox = new ComboBox();
-        comboBox.getItems().add("Cilinder");
-        comboBox.getItems().add("Sphere");
-        comboBox.getItems().add("Block");
+        for (Block b : blocks) {
+            comboBox.getItems().add(b.toString());
+        }
 
         HBox hbox = new HBox(comboBox);
 
@@ -60,6 +65,10 @@ public class Main extends Application {
 //    }
     // Hier zet ik een comment om te testen of alles werkt
 
+//    public static void main(String[] args) {
+//        launch(args);
+//    }
+
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
         Figure figure = new Figure();
         Block block = new Block();
@@ -85,7 +94,21 @@ public class Main extends Application {
         blockVolume = block.calculateVolume(5.5, 5.5, 5.5);
         System.out.println("volume of " + block.getType() + " is : " + blockVolume);
 
-        BlockDAO.insertBlock(5.5, 5.5, 5.5);
+        //Block
+//        BlockDAO.insertBlock(2, 5.5, 3.5);
+////        BlockDAO.deleteAllBlocks();
+//        ArrayList<Block> blocks = BlockDAO.readAllBlocks();
+//        for (Block b : blocks) {
+//            System.out.println(b.toString());
+//        }
+
+        //Cilinder
+        CilinderDAO.insertCilinder( 19, 17.5);
+//        CilinderDAO.deleteAllCilinders();
+        ArrayList<Cilinder> cilinders = CilinderDAO.readAllCilinders();
+        for (Cilinder c : cilinders) {
+            System.out.println(c.toString());
+        }
     }
 
 //    public static void main(String[] args) {
