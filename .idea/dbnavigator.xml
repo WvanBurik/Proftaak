@@ -23,7 +23,11 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="ae85ee4d-b0ae-4aa1-bb7e-5542b93cd0b8">
+        <schema name="proftaak" object-types="procedure, table, view, function" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="ae85ee4d-b0ae-4aa1-bb7e-5542b93cd0b8">
