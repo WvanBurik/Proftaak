@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:Ammar" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a8e1ab99-b1c0-4fb1-9100-f0285afa5a7a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Proftaak.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Proftaak.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Block.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Block.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/BlockDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/BlockDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/DAB/DBUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/DAB/DBUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Interfaces/IDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Interfaces/IDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/sample/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Classes/Cilinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Classes/Cilinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/DAB/DBUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DAB/DBUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1iSceb185ez6V8YTREmjWB38W5H" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.21.jar" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sample.Main" />
+      <module name="Proftaak" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-14.0.2.1\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a8e1ab99-b1c0-4fb1-9100-f0285afa5a7a" name="Default Changelist" comment="" />
+      <created>1601904533314</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601904533314</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="Ammar" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="140" y="56" width="1086" height="856" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601904374317">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state x="140" y="56" width="1086" height="856" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1368.912@0.0.1368.912" timestamp="1601904374317" />
+    <state x="466" y="215" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1601903681304">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state x="466" y="215" key="#com.intellij.ide.macro.MacrosDialog/0.0.1368.912@0.0.1368.912" timestamp="1601903681304" />
+    <state x="415" y="295" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1601752467108">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state x="415" y="295" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1368.912@0.0.1368.912" timestamp="1601752467108" />
+    <state x="536" y="335" key="DBNavigator.ConnectionAuthenticationDialog" timestamp="1601905747376">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state x="536" y="335" key="DBNavigator.ConnectionAuthenticationDialog/0.0.1368.912@0.0.1368.912" timestamp="1601905747376" />
+    <state x="215" y="111" key="DBNavigator.ProjectSettingsDialog" timestamp="1601979330755">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state x="215" y="111" key="DBNavigator.ProjectSettingsDialog/0.0.1368.912@0.0.1368.912" timestamp="1601979330755" />
+    <state x="466" y="199" key="FileChooserDialogImpl" timestamp="1601992980012">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state x="466" y="199" key="FileChooserDialogImpl/0.0.1368.912@0.0.1368.912" timestamp="1601992980012" />
+    <state width="1326" height="239" key="GridCell.Tab.0.bottom" timestamp="1602103741598">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state width="1326" height="239" key="GridCell.Tab.0.bottom/0.0.1368.912@0.0.1368.912" timestamp="1602103741598" />
+    <state width="1326" height="239" key="GridCell.Tab.0.center" timestamp="1602103741598">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state width="1326" height="239" key="GridCell.Tab.0.center/0.0.1368.912@0.0.1368.912" timestamp="1602103741598" />
+    <state width="1326" height="239" key="GridCell.Tab.0.left" timestamp="1602103741598">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state width="1326" height="239" key="GridCell.Tab.0.left/0.0.1368.912@0.0.1368.912" timestamp="1602103741598" />
+    <state width="1326" height="239" key="GridCell.Tab.0.right" timestamp="1602103741598">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state width="1326" height="239" key="GridCell.Tab.0.right/0.0.1368.912@0.0.1368.912" timestamp="1602103741598" />
+    <state x="165" y="31" key="SettingsEditor" timestamp="1601996546829">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state x="165" y="31" key="SettingsEditor/0.0.1368.912@0.0.1368.912" timestamp="1601996546829" />
+    <state x="499" y="234" key="chooseDestDirectoryDialog" timestamp="1601903908081">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state x="499" y="234" key="chooseDestDirectoryDialog/0.0.1368.912@0.0.1368.912" timestamp="1601903908081" />
+  </component>
+</project>
