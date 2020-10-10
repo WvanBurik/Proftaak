@@ -25,24 +25,30 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8e1ab99-b1c0-4fb1-9100-f0285afa5a7a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Proftaak.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Proftaak.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Block.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Block.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/BlockDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/BlockDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/DAB/DBUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/DAB/DBUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Interfaces/IDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Interfaces/IDAO.class" afterDir="false" />
+    <list default="true" id="a8e1ab99-b1c0-4fb1-9100-f0285afa5a7a" name="Default Changelist" comment="Two buttons added and GUI">
+      <change afterPath="$PROJECT_DIR$/src/sample/Cilinder.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/block.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Cilinder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Cilinder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/sample/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Proftaak/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/sample/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Classes/Cilinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Classes/Cilinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/DAB/DBUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DAB/DBUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/sample/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Classes/Figure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Classes/Figure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -80,6 +86,14 @@
       <option name="presentableId" value="Default" />
       <updated>1601904533314</updated>
     </task>
+    <task id="LOCAL-00001" summary="Two buttons added and GUI">
+      <created>1602103810395</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602103810396</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -106,6 +120,10 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Two buttons added and GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Two buttons added and GUI" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="140" y="56" width="1086" height="856" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601904374317">
       <screen x="0" y="0" width="1368" height="912" />
@@ -131,26 +149,30 @@
       <screen x="0" y="0" width="1368" height="912" />
     </state>
     <state x="466" y="199" key="FileChooserDialogImpl/0.0.1368.912@0.0.1368.912" timestamp="1601992980012" />
-    <state width="1326" height="239" key="GridCell.Tab.0.bottom" timestamp="1602103741598">
+    <state width="1326" height="187" key="GridCell.Tab.0.bottom" timestamp="1602285988188">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state width="1326" height="239" key="GridCell.Tab.0.bottom/0.0.1368.912@0.0.1368.912" timestamp="1602103741598" />
-    <state width="1326" height="239" key="GridCell.Tab.0.center" timestamp="1602103741598">
+    <state width="1326" height="187" key="GridCell.Tab.0.bottom/0.0.1368.912@0.0.1368.912" timestamp="1602285988188" />
+    <state width="1326" height="187" key="GridCell.Tab.0.center" timestamp="1602285988187">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state width="1326" height="239" key="GridCell.Tab.0.center/0.0.1368.912@0.0.1368.912" timestamp="1602103741598" />
-    <state width="1326" height="239" key="GridCell.Tab.0.left" timestamp="1602103741598">
+    <state width="1326" height="187" key="GridCell.Tab.0.center/0.0.1368.912@0.0.1368.912" timestamp="1602285988187" />
+    <state width="1326" height="187" key="GridCell.Tab.0.left" timestamp="1602285988187">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state width="1326" height="239" key="GridCell.Tab.0.left/0.0.1368.912@0.0.1368.912" timestamp="1602103741598" />
-    <state width="1326" height="239" key="GridCell.Tab.0.right" timestamp="1602103741598">
+    <state width="1326" height="187" key="GridCell.Tab.0.left/0.0.1368.912@0.0.1368.912" timestamp="1602285988187" />
+    <state width="1326" height="187" key="GridCell.Tab.0.right" timestamp="1602285988188">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state width="1326" height="239" key="GridCell.Tab.0.right/0.0.1368.912@0.0.1368.912" timestamp="1602103741598" />
+    <state width="1326" height="187" key="GridCell.Tab.0.right/0.0.1368.912@0.0.1368.912" timestamp="1602285988188" />
     <state x="165" y="31" key="SettingsEditor" timestamp="1601996546829">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
     <state x="165" y="31" key="SettingsEditor/0.0.1368.912@0.0.1368.912" timestamp="1601996546829" />
+    <state x="277" y="176" key="Vcs.Push.Dialog.v2" timestamp="1602103822240">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state x="277" y="176" key="Vcs.Push.Dialog.v2/0.0.1368.912@0.0.1368.912" timestamp="1602103822240" />
     <state x="499" y="234" key="chooseDestDirectoryDialog" timestamp="1601903908081">
       <screen x="0" y="0" width="1368" height="912" />
     </state>

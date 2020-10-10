@@ -1,5 +1,8 @@
 package main.Classes;
 
+import main.DAB.DBUtil;
+
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -84,5 +87,15 @@ public class Figure {
 
         //Eerst huidig record naar database opslaan voor je alles ophaald en berekend.
         return 0.0;
+    }
+    public static void showAllFigures() throws SQLException, ClassNotFoundException {
+        String sql = "SELECT * FROM Cilinder;";
+        try {
+            DBUtil.dbExecuteQuery(sql);
+        } catch (SQLException e) {
+            System.out.println("Exception occur while inserting the data " + e);
+            e.printStackTrace();
+            throw e;
+        }
     }
 }

@@ -1,24 +1,14 @@
 package sample;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-//import javafx.scene.control.Label;
 import main.Classes.*;
-import javafx.scene.layout.BorderPane;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.UUID;
 
 public class Main extends Application {
 
@@ -31,8 +21,10 @@ public class Main extends Application {
 //        ArrayList<Figure> figures = new ArrayList<Figure>();
 //        figures.add(block);
 //
-//        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-//        primaryStage.setTitle("Hello World");
+        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        primaryStage.setTitle("VAT");
+        primaryStage.setScene(new Scene(root, 600, 500));
+        primaryStage.show();
 //
 //        ArrayList<Block> blocks = BlockDAO.readAllBlocks();
 //
@@ -48,8 +40,8 @@ public class Main extends Application {
 //        primaryStage.setScene(scene1);
 //
 ////        Label label = new Label("" + block.calculateContent(5, 5, 5));
-////        Scene scene = new Scene(label, 400, 200);
-////        primaryStage.setScene(scene);
+//        Scene scene = new Scene(label, 400, 200);
+
 //
 //        primaryStage.show();
 //
@@ -57,50 +49,49 @@ public class Main extends Application {
 ////        figure.createFigure(comboBox.getCursor().toString());
         // 6. Create the main view and add the high level layout
         // 3.1. Create the menu for the general layout
-        VBox menu = new VBox();
-        menu.setStyle("-fx-background-color: #000000;");
-        menu.setPadding(new Insets(20, 20, 20, 20));
-        menu.setSpacing(10);
-        BorderPane layout = new BorderPane();
-        // 3.2. Create the menu buttons
-        Button testButton = new Button("add new cilinder");
-        Button deleteAllCilinders = new Button("Delete All cilinders");
+//        VBox menu = new VBox();
+//        menu.setStyle("-fx-background-color: #000000;");
+//        menu.setPadding(new Insets(20, 20, 20, 20));
+//        menu.setSpacing(10);
+//        BorderPane layout = new BorderPane();
+//        // 3.2. Create the menu buttons
+//        Button testButton = new Button("add new cilinder");
+//        Button deleteAllCilinders = new Button("Delete All cilinders");
+//
+//        // 3.3. Add the buttons to the menu
+//        menu.getChildren().addAll(testButton, deleteAllCilinders);
+//        layout.setTop(menu);
+//
+//
+//        Scene view = new Scene(layout, 600, 400);
+//
+//        // 7. Show the application
+//        primaryStage.setScene(view);
+//        primaryStage.show();
+//        testButton.setOnAction(new EventHandler<ActionEvent>() {
+//            @Override public void handle(ActionEvent e) {
+//                try {
+//                    insertCilinder();
+//                } catch (SQLException throwables) {
+//                    throwables.printStackTrace();
+//                } catch (ClassNotFoundException classNotFoundException) {
+//                    classNotFoundException.printStackTrace();
+//                }
+//            }
+//        });
+//        deleteAllCilinders.setOnAction(new EventHandler<ActionEvent>() {
+//            @Override public void handle(ActionEvent e) {
+//                try {
+//                    CilinderDAO.deleteAllCilinders();
+//                } catch (SQLException throwables) {
+//                    throwables.printStackTrace();
+//                } catch (ClassNotFoundException classNotFoundException) {
+//                    classNotFoundException.printStackTrace();
+//                }
+//            }
+//        });
 
-        // 3.3. Add the buttons to the menu
-        menu.getChildren().addAll(testButton, deleteAllCilinders);
-        layout.setTop(menu);
-
-
-        Scene view = new Scene(layout, 400, 300);
-
-        // 7. Show the application
-        primaryStage.setScene(view);
-        primaryStage.show();
-        testButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override public void handle(ActionEvent e) {
-                try {
-                    insertCilinder();
-                } catch (SQLException throwables) {
-                    throwables.printStackTrace();
-                } catch (ClassNotFoundException classNotFoundException) {
-                    classNotFoundException.printStackTrace();
-                }
-            }
-        });
-        deleteAllCilinders.setOnAction(new EventHandler<ActionEvent>() {
-            @Override public void handle(ActionEvent e) {
-                try {
-                    CilinderDAO.deleteAllCilinders();
-                } catch (SQLException throwables) {
-                    throwables.printStackTrace();
-                } catch (ClassNotFoundException classNotFoundException) {
-                    classNotFoundException.printStackTrace();
-                }
-            }
-        });
     }
-
-
 
 
 //    public static void main(String[] args) {
@@ -158,15 +149,8 @@ public class Main extends Application {
 
 
     }
-    public void insertCilinder() throws SQLException, ClassNotFoundException {
-        CilinderDAO.insertCilinder( 19, 17.5);
-//        CilinderDAO.deleteAllCilinders();
-        ArrayList<Cilinder> cilinders = CilinderDAO.readAllCilinders();
-        for (Cilinder c : cilinders) {
-            System.out.println(c.toString());
-        }
 
-    }
+
 
 //    public static void main(String[] args) {
 //        Figure figure = new Figure();
