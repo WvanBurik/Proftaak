@@ -9,6 +9,11 @@ public class Sphere extends Figure {
         this.radius = radius;
     }
 
+    public Sphere(String id, double radius) {
+        this.id = id;
+        this.radius = radius;
+    }
+
     public Sphere() {
     }
 
@@ -36,6 +41,7 @@ public class Sphere extends Figure {
     @Override
     public String toString() {
         return "Sphere{" +
+                "id=" + id +
                 "radius=" + radius +
                 ", content=" + volume +
                 '}';

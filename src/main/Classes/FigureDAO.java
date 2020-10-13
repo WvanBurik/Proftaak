@@ -29,4 +29,31 @@ public class FigureDAO {
         return figures;
     }
 
+    public static double readAllFiguresForTotalVolume() throws SQLException, ClassNotFoundException {
+        double totalVolume = 0;
+
+        ArrayList<Block> blocks = BlockDAO.readAllBlocks();
+        ArrayList<Cilinder> cilinders = CilinderDAO.readAllCilinders();
+        ArrayList<Hemisphere> hemispheres = HemisphereDAO.readAllHemispheres();
+        ArrayList<Pyramid> pyramids = PyramidDAO.readAllPyramids();
+        ArrayList<Sphere> spheres = SphereDAO.readAllSpheres();
+
+        for (Block b : blocks) {
+            totalVolume += b.calculateVolume(b.getLength(), b.getWidth(), b.getHeight());
+        }
+        for (Cilinder c : cilinders) {
+            totalVolume += c.calculateVolume(c.getHeight(), c.getRadius());
+        }
+        for (Hemisphere h : hemispheres) {
+            totalVolume += h.calculateVolume(h.getRadius());
+        }
+        for (Pyramid p : pyramids) {
+            totalVolume += p.calculateVolume(p.getHeight(), p.getBaseLength());
+        }
+        for (Sphere s : spheres) {
+            totalVolume += s.calculateVolume(s.getRadius());
+        }
+        return totalVolume;
+    }
+
 }

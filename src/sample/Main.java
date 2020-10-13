@@ -110,6 +110,8 @@ public class Main extends Application {
             System.out.println(f.toString());
         }
 
+//        System.out.println(FigureDAO.readAllFiguresForTotalVolume());
+
 //        System.out.println(figure.calculateTotalContent());
     }
 
