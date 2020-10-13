@@ -105,10 +105,12 @@ public class Main extends Application {
 //        CilinderDAO.insertCilinder( 19, 17.5);
 //        CilinderDAO.deleteAllCilinders();
 
-        ArrayList<Figure> figures = FigureDAO.readAllFigures();
-        for (Figure f : figures) {
-            System.out.println(f.toString());
-        }
+//        ArrayList<Figure> figures = FigureDAO.readAllFigures();
+//        for (Figure f : figures) {
+//            System.out.println(f.toString());
+//        }
+
+        System.out.println(FigureDAO.readAllFiguresForTotalVolume());
 
 //        System.out.println(figure.calculateTotalContent());
     }
