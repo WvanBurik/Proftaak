@@ -1,13 +1,17 @@
 package sample;
 
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 import main.Classes.*;
 
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class Main extends Application {
@@ -113,6 +117,7 @@ public class Main extends Application {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
         launch(args);
+
         Figure figure = new Figure();
         Block block = new Block();
         Sphere sphere = new Sphere();
