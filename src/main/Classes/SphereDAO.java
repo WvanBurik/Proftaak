@@ -44,7 +44,7 @@ public class SphereDAO {
             while (rs.next()) {
                 String ID = rs.getString("ID");
                 double radius = rs.getDouble("radius");
-                Sphere sphere = new Sphere(radius);
+                Sphere sphere = new Sphere(ID, radius);
                 spheres.add(sphere);
             }
         } catch (SQLException e) {

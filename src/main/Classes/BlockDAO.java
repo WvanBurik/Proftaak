@@ -48,7 +48,7 @@ public class BlockDAO {
                 double length = rs.getDouble("length");
                 double width = rs.getDouble("width");
                 double height = rs.getDouble("height");
-                Block block = new Block(length, width, height);
+                Block block = new Block(ID, length, width, height);
                 blocks.add(block);
             }
         }

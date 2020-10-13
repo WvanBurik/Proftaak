@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 public class Figure {
 
+    protected String id;
     protected double volume;
     protected String type;
     private ArrayList<Figure> figures;

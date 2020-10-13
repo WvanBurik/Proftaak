@@ -44,7 +44,7 @@ public class HemisphereDAO {
             while (rs.next()) {
                 String ID = rs.getString("ID");
                 double radius = rs.getDouble("radius");
-                Hemisphere hemisphere = new Hemisphere(radius);
+                Hemisphere hemisphere = new Hemisphere(ID, radius);
                 hemispheres.add(hemisphere);
             }
         } catch (SQLException e) {

@@ -9,6 +9,11 @@ public class Hemisphere extends Figure {
         this.radius = radius;
     }
 
+    public Hemisphere(String id, double radius) {
+        this.id = id;
+        this.radius = radius;
+    }
+
     public Hemisphere() {
     }
 
@@ -36,6 +41,7 @@ public class Hemisphere extends Figure {
     @Override
     public String toString() {
         return "Hemisphere{" +
+                "id=" + id +
                 "radius=" + radius + '}';
     }
 

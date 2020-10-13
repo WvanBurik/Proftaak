@@ -45,7 +45,7 @@ public class CilinderDAO {
                 String ID = rs.getString("ID");
                 double height = rs.getDouble("height");
                 double radius = rs.getDouble("radius");
-                Cilinder cilinder = new Cilinder(height, radius);
+                Cilinder cilinder = new Cilinder(ID, height, radius);
                 cilinders.add(cilinder);
             }
         } catch (SQLException e) {

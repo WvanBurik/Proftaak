@@ -45,7 +45,7 @@ public class PyramidDAO {
                 String ID = rs.getString("ID");
                 double height = rs.getDouble("height");
                 double baseLength = rs.getDouble("baseLength");
-                Pyramid pyramid = new Pyramid(height, baseLength);
+                Pyramid pyramid = new Pyramid(ID, height, baseLength);
                 pyramids.add(pyramid);
             }
         } catch (SQLException e) {

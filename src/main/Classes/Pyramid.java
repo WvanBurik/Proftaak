@@ -10,6 +10,12 @@ public class Pyramid extends Figure {
         this.baseLength = baseLength;
     }
 
+    public Pyramid(String id, double height, double baseLength) {
+        this.id = id;
+        this.height = height;
+        this.baseLength = baseLength;
+    }
+
     public Pyramid() {
     }
 
@@ -34,5 +40,14 @@ public class Pyramid extends Figure {
         double volumeOfPyramid = super.calculateVolume(baseH, (baseL * baseL));
 
         return volumeOfPyramid / 3;
+    }
+
+    @Override
+    public String toString() {
+        return "Pyramid{" +
+                "id=" + id +
+                "height=" + height +
+                ", baseLength=" + baseLength +
+                '}';
     }
 }
