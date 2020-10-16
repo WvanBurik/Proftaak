@@ -11,6 +11,12 @@ public class Cilinder extends Figure {
         this.radius = radius;
     }
 
+    public Cilinder(String id, double height, double radius) {
+        this.id = id;
+        this.height = height;
+        this.radius = radius;
+    }
+
     public Cilinder() {
     }
 
@@ -43,6 +49,7 @@ public class Cilinder extends Figure {
     @Override
     public String toString() {
         return "Cilinder{" +
+                "id=" + id +
                 "height=" + height +
                 ", radius=" + radius +
                 ", volume=" + volume +

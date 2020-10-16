@@ -14,6 +14,13 @@ public class Block extends Figure {
         this.height     = height;
     }
 
+    public Block(String id, double length, double width, double height) {
+        this.id = id;
+        this.length     = length;
+        this.width      = width;
+        this.height     = height;
+    }
+
     public Block() {
     }
 
@@ -43,6 +50,7 @@ public class Block extends Figure {
     @Override
     public String toString() {
         return "Block{" +
+                "id=" + id +
                 "length=" + length +
                 ", width=" + width +
                 ", height=" + height +

@@ -5,7 +5,7 @@ import java.sql.*;
 
 public class DBUtil {
 
-    private static final String JDBC_Driver = "com.mysql.jdbc.Driver";
+    private static final String JDBC_Driver = "com.mysql.cj.jdbc.Driver";
 
     private static Connection connection = null;
 
@@ -21,7 +21,7 @@ public class DBUtil {
             e.printStackTrace();
             throw e;
         }
-        System.out.println("JDBC Driver has been registered!");
+        System.out.println("---------------");
 
         try {
             connection = DriverManager.getConnection(connStr, "root", "root");
