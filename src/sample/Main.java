@@ -5,9 +5,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import main.Classes.*;
+import main.Classes.FigureDAO;
+
 import java.sql.*;
-import java.util.ArrayList;
+
 
 public class Main extends Application {
 
@@ -25,35 +26,35 @@ public class Main extends Application {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
         launch(args);
 
-        Figure figure = new Figure();
-        Block block = new Block();
-        Sphere sphere = new Sphere();
-        Cilinder cilinder = new Cilinder();
-        Pyramid pyramid = new Pyramid();
-        Hemisphere hemisphere = new Hemisphere();
-
-        double figureVolume, blockVolume, sphereVolume, cilinderVolume, pyramidVolume, hemisphereVolume;
-
-        hemisphereVolume = hemisphere.calculateVolume(8);
-        System.out.println("volume of " + hemisphere.getType() + " is : " + hemisphereVolume);
-
-        sphereVolume = sphere.calculateVolume(48);
-        System.out.println("volume of " + sphere.getType() + " is : " + sphereVolume);
-
-        pyramidVolume = pyramid.calculateVolume(9, 10);
-        System.out.println("volume of " + pyramid.getType() + " is : " + pyramidVolume);
-
-        cilinderVolume = cilinder.calculateVolume(38, 35);
-        System.out.println("volume of " + cilinder.getType() + " is : " + cilinderVolume);
-
-        blockVolume = block.calculateVolume(5.5, 5.5, 5.5);
-        System.out.println("volume of " + block.getType() + " is : " + blockVolume);
-
-
-        ArrayList<Figure> figures = FigureDAO.readAllFigures();
-        for (Figure f : figures) {
-            System.out.println(f.toString());
-        }
+//        Figure figure = new Figure();
+//        Block block = new Block();
+//        Sphere sphere = new Sphere();
+//        Cilinder cilinder = new Cilinder();
+//        Pyramid pyramid = new Pyramid();
+//        Hemisphere hemisphere = new Hemisphere();
+//
+//        double figureVolume, blockVolume, sphereVolume, cilinderVolume, pyramidVolume, hemisphereVolume;
+//
+//        hemisphereVolume = hemisphere.calculateVolume(8);
+//        System.out.println("volume of " + hemisphere.getType() + " is : " + hemisphereVolume);
+//
+//        sphereVolume = sphere.calculateVolume(48);
+//        System.out.println("volume of " + sphere.getType() + " is : " + sphereVolume);
+//
+//        pyramidVolume = pyramid.calculateVolume(9, 10);
+//        System.out.println("volume of " + pyramid.getType() + " is : " + pyramidVolume);
+//
+//        cilinderVolume = cilinder.calculateVolume(38, 35);
+//        System.out.println("volume of " + cilinder.getType() + " is : " + cilinderVolume);
+//
+//        blockVolume = block.calculateVolume(5.5, 5.5, 5.5);
+//        System.out.println("volume of " + block.getType() + " is : " + blockVolume);
+//
+//
+//        ArrayList<Figure> figures = FigureDAO.readAllFigures();
+//        for (Figure f : figures) {
+//            System.out.println(f.toString());
+//        }
 
 //        System.out.println(FigureDAO.readAllFiguresForTotalVolume());
 

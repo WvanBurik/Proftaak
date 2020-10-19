@@ -25,40 +25,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8e1ab99-b1c0-4fb1-9100-f0285afa5a7a" name="Default Changelist" comment="Two buttons added and GUI">
-      <change afterPath="$PROJECT_DIR$/src/main/Classes/FigureDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Classes/HemisphereController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Classes/PyramidController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Classes/PyramidDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Classes/SphereController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Classes/SphereDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/hemisphere.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/pyramid.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/sphere.fxml" afterDir="false" />
+    <list default="true" id="a8e1ab99-b1c0-4fb1-9100-f0285afa5a7a" name="Default Changelist" comment="Last edit of the GUI and some functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Block.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Block.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/BlockDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/BlockDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Cilinder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Cilinder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/CilinderDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/CilinderDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Figure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Figure.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Hemisphere.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Hemisphere.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/HemisphereDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/HemisphereDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Pyramid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Pyramid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Sphere.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Sphere.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/DAB/DBUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/DAB/DBUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Proftaak/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/sample/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Proftaak/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/sample/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Proftaak/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/sample/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Classes/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Classes/Block.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Classes/BlockDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Classes/BlockDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Classes/Cilinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Classes/Cilinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Classes/CilinderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Classes/CilinderDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Classes/Figure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Classes/Figure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Classes/Hemisphere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Classes/Hemisphere.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Classes/HemisphereDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Classes/HemisphereDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Classes/Pyramid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Classes/Pyramid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Classes/Sphere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Classes/Sphere.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/DAB/DBUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DAB/DBUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
@@ -134,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602103810396</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Last edit of the GUI and some functions">
+      <created>1602886793935</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602886793935</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -164,7 +142,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Two buttons added and GUI" />
     <MESSAGE value="All stages added" />
-    <option name="LAST_COMMIT_MESSAGE" value="All stages added" />
+    <MESSAGE value="Last edit of the GUI and some functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Last edit of the GUI and some functions" />
   </component>
   <component name="WindowStateProjectService">
     <state x="140" y="56" width="1086" height="856" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601904374317">
@@ -175,6 +154,10 @@
       <screen x="0" y="0" width="1368" height="912" />
     </state>
     <state x="466" y="215" key="#com.intellij.ide.macro.MacrosDialog/0.0.1368.912@0.0.1368.912" timestamp="1601903681304" />
+    <state x="490" y="172" key="#com.intellij.ide.util.MemberChooser" timestamp="1602887542734">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state x="490" y="172" key="#com.intellij.ide.util.MemberChooser/0.0.1368.912@0.0.1368.912" timestamp="1602887542734" />
     <state x="415" y="295" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1601752467108">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
@@ -191,22 +174,22 @@
       <screen x="0" y="0" width="1368" height="912" />
     </state>
     <state x="466" y="199" key="FileChooserDialogImpl/0.0.1368.912@0.0.1368.912" timestamp="1601992980012" />
-    <state width="1326" height="187" key="GridCell.Tab.0.bottom" timestamp="1602800540178">
+    <state width="1326" height="187" key="GridCell.Tab.0.bottom" timestamp="1603112654494">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state width="1326" height="187" key="GridCell.Tab.0.bottom/0.0.1368.912@0.0.1368.912" timestamp="1602800540178" />
-    <state width="1326" height="187" key="GridCell.Tab.0.center" timestamp="1602800540178">
+    <state width="1326" height="187" key="GridCell.Tab.0.bottom/0.0.1368.912@0.0.1368.912" timestamp="1603112654494" />
+    <state width="1326" height="187" key="GridCell.Tab.0.center" timestamp="1603112654494">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state width="1326" height="187" key="GridCell.Tab.0.center/0.0.1368.912@0.0.1368.912" timestamp="1602800540178" />
-    <state width="1326" height="187" key="GridCell.Tab.0.left" timestamp="1602800540178">
+    <state width="1326" height="187" key="GridCell.Tab.0.center/0.0.1368.912@0.0.1368.912" timestamp="1603112654494" />
+    <state width="1326" height="187" key="GridCell.Tab.0.left" timestamp="1603112654494">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state width="1326" height="187" key="GridCell.Tab.0.left/0.0.1368.912@0.0.1368.912" timestamp="1602800540178" />
-    <state width="1326" height="187" key="GridCell.Tab.0.right" timestamp="1602800540178">
+    <state width="1326" height="187" key="GridCell.Tab.0.left/0.0.1368.912@0.0.1368.912" timestamp="1603112654494" />
+    <state width="1326" height="187" key="GridCell.Tab.0.right" timestamp="1603112654494">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state width="1326" height="187" key="GridCell.Tab.0.right/0.0.1368.912@0.0.1368.912" timestamp="1602800540178" />
+    <state width="1326" height="187" key="GridCell.Tab.0.right/0.0.1368.912@0.0.1368.912" timestamp="1603112654494" />
     <state x="131" y="75" key="MergeDialog" timestamp="1602799706388">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
@@ -223,10 +206,10 @@
       <screen x="0" y="0" width="1368" height="912" />
     </state>
     <state x="165" y="31" key="SettingsEditor/0.0.1368.912@0.0.1368.912" timestamp="1602800240144" />
-    <state x="277" y="176" key="Vcs.Push.Dialog.v2" timestamp="1602614936971">
+    <state x="277" y="176" key="Vcs.Push.Dialog.v2" timestamp="1602886856706">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state x="277" y="176" key="Vcs.Push.Dialog.v2/0.0.1368.912@0.0.1368.912" timestamp="1602614936971" />
+    <state x="277" y="176" key="Vcs.Push.Dialog.v2/0.0.1368.912@0.0.1368.912" timestamp="1602886856706" />
     <state x="499" y="234" key="chooseDestDirectoryDialog" timestamp="1601903908081">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
