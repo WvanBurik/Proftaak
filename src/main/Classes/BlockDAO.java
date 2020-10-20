@@ -37,6 +37,17 @@ public class BlockDAO {
         }
     }
 
+    public static void deleteBlock(String selectedIdx) throws SQLException, ClassNotFoundException {
+        String sql = "DELETE FROM Block where ID = '" + selectedIdx + "';";
+        try {
+            DBUtil.dbExecuteQuery(sql);
+        } catch (SQLException e) {
+            System.out.println("Exception occur while inserting the data " + e);
+            e.printStackTrace();
+            throw e;
+        }
+    }
+
     public static ArrayList readAllBlocks() throws SQLException, ClassNotFoundException{
         String sql = "SELECT * FROM Block;";
         ArrayList<Block> blocks = new ArrayList<>();

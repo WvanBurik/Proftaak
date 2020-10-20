@@ -35,6 +35,17 @@ public class SphereDAO {
         }
     }
 
+    public static void deleteSphere(String selectedIdx) throws SQLException, ClassNotFoundException {
+        String sql = "DELETE FROM Sphere where id = '" + selectedIdx + "';";
+        try {
+            DBUtil.dbExecuteQuery(sql);
+        } catch (SQLException e) {
+            System.out.println("Exception occur while inserting the data " + e);
+            e.printStackTrace();
+            throw e;
+        }
+    }
+
     public static ArrayList readAllSpheres() throws SQLException, ClassNotFoundException {
         String sql = "SELECT * FROM Sphere;";
         ArrayList<Sphere> spheres = new ArrayList<>();

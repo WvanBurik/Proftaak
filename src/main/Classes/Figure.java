@@ -74,9 +74,9 @@ public class Figure implements Serializable {
 ////        }
 //    }
 
-    public void deleteFigure() {
-        //Delete a specific figure.
-    }
+//    public static void deleteFigure(int selectedIdx) throws SQLException, ClassNotFoundException {
+//
+//    }
 
     public void saveFigure() {
         //Save the figure.

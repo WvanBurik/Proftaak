@@ -1,6 +1,7 @@
 package main.Classes;
 
 import java.io.*;
+import java.sql.SQLException;
 
 public class Sphere extends Figure {
 
@@ -35,6 +36,10 @@ public class Sphere extends Figure {
         return (4.0/3.0) * pi * (radiusForVolume *radiusForVolume * radiusForVolume);
     }
 
+    public static void deleteFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
+        SphereDAO.deleteSphere(selectedIdx);
+    }
+
     public void createSphere() {
         //Create figure and go to interface implemented java class to insert record to database.
         System.out.println("createSphere");
@@ -43,9 +48,8 @@ public class Sphere extends Figure {
     @Override
     public String toString() {
         return "Sphere{" +
-                "id=" + id +
-                "radius=" + radius +
-                ", content=" + volume +
+                "{id=" + id +
+                "}radius=" + radius +
                 '}';
     }
 

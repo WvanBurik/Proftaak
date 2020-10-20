@@ -1,6 +1,7 @@
 package main.Classes;
 
 import java.io.*;
+import java.sql.SQLException;
 
 public class Hemisphere extends Figure {
 
@@ -40,11 +41,15 @@ public class Hemisphere extends Figure {
         return (4.0/3.0) * pi * (radiusForVolume *radiusForVolume * radiusForVolume) / 2;
     }
 
+    public static void deleteFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
+        HemisphereDAO.deleteHemisphere(selectedIdx);
+    }
+
     @Override
     public String toString() {
         return "Hemisphere{" +
-                "id=" + id +
-                "radius=" + radius + '}';
+                "{id=" + id +
+                "}radius=" + radius + '}';
     }
 
     public static void writeFigureToFile(Hemisphere hemisphere) {

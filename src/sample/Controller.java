@@ -13,8 +13,8 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import main.Classes.Figure;
-import main.Classes.FigureDAO;
+import main.Classes.*;
+
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
@@ -74,10 +74,41 @@ public class Controller implements Initializable {
 
     }
 
-    public void deleteSelected() {
+    public void deleteSelected() throws SQLException, ClassNotFoundException {
         final int selectedIdx = show_all.getSelectionModel().getSelectedIndex();
+        final String getSelItem = show_all.getSelectionModel().getSelectedItem();
+
+        String DBId = getSelItem.substring(getSelItem.indexOf("{id") + 4, getSelItem.indexOf("}"));
+
+        String toStringVal = getSelItem;
+        int iend = toStringVal.indexOf("{");
+        String classString = "";
+
+        if (iend != -1)
+        {
+            classString= toStringVal.substring(0 , iend); //this will give abc
+        }
+        //Deletes local
         show_all.getItems().remove(selectedIdx);
 
+        //Deletes in DB
+        switch(classString) {
+            case "Block":
+                Block.deleteFigure(DBId);
+                break;
+            case "Cilinder":
+                Cilinder.deleteFigure(DBId);
+                break;
+            case "Hemisphere":
+                Hemisphere.deleteFigure(DBId);
+                break;
+            case "Pyramid":
+                Pyramid.deleteFigure(DBId);
+                break;
+            case "Sphere":
+                Sphere.deleteFigure(DBId);
+                break;
+        }
 
     }
 

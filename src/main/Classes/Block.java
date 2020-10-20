@@ -27,6 +27,10 @@ public class Block extends Figure {
     public Block() {
     }
 
+    public static void deleteFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
+        BlockDAO.deleteBlock(selectedIdx);
+    }
+
 
     @Override
     public String getType() {
@@ -54,8 +58,8 @@ public class Block extends Figure {
     @Override
     public String toString() {
         return "Block{" +
-                "id=" + id +
-                "length=" + length +
+                "{id=" + id +
+                "}length=" + length +
                 ", width=" + width +
                 ", height=" + height +
                 '}';
