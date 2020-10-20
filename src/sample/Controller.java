@@ -72,6 +72,8 @@ public class Controller implements Initializable {
 
     public void showAllVolume() throws SQLException, ClassNotFoundException {
 
+        double totalVolume = FigureDAO.readAllFiguresForTotalVolume();
+        total_volume_all.setText(String.valueOf(totalVolume));
     }
 
     public void deleteSelected() throws SQLException, ClassNotFoundException {
