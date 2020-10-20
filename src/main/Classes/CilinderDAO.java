@@ -42,6 +42,20 @@ public class CilinderDAO {
         }
     }
 
+    public static void deleteCilinder(String selectedIdx) throws SQLException, ClassNotFoundException {
+        String sql = "DELETE FROM Cilinder where ID = '" + selectedIdx + "';";
+
+        System.out.println(sql);
+        try {
+            DBUtil.dbExecuteQuery(sql);
+            System.out.println(sql);
+        } catch (SQLException e) {
+            System.out.println("Exception occur while inserting the data " + e);
+            e.printStackTrace();
+            throw e;
+        }
+    }
+
     public static ArrayList readAllCilinders() throws SQLException, ClassNotFoundException {
         String sql = "SELECT * FROM Cilinder;";
         ArrayList<Cilinder> cilinders = new ArrayList<>();

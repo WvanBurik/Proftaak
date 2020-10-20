@@ -35,6 +35,17 @@ public class PyramidDAO {
         }
     }
 
+    public static void deletePyramid(String selectedIdx) throws SQLException, ClassNotFoundException {
+        String sql = "DELETE FROM Pyramid where id = '" + selectedIdx + "';";
+        try {
+            DBUtil.dbExecuteQuery(sql);
+        } catch (SQLException e) {
+            System.out.println("Exception occur while inserting the data " + e);
+            e.printStackTrace();
+            throw e;
+        }
+    }
+
     public static ArrayList readAllPyramids() throws SQLException, ClassNotFoundException {
         String sql = "SELECT * FROM Pyramid;";
         ArrayList<Pyramid> pyramids = new ArrayList<>();

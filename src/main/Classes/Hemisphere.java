@@ -1,5 +1,8 @@
 package main.Classes;
 
+import java.io.*;
+import java.sql.SQLException;
+
 public class Hemisphere extends Figure {
 
     private double radius;
@@ -38,11 +41,33 @@ public class Hemisphere extends Figure {
         return (4.0/3.0) * pi * (radiusForVolume *radiusForVolume * radiusForVolume) / 2;
     }
 
+    public static void deleteFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
+        HemisphereDAO.deleteHemisphere(selectedIdx);
+    }
+
     @Override
     public String toString() {
         return "Hemisphere{" +
-                "id=" + id +
-                "radius=" + radius + '}';
+                "{id=" + id +
+                "}radius=" + radius + '}';
     }
 
+    public static void writeFigureToFile(Hemisphere hemisphere) {
+
+        try {
+            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\TempmyObjects.ser"));
+            ObjectOutputStream o = new ObjectOutputStream(f);
+
+            o.writeObject(hemisphere);
+
+            o.close();
+            f.close();
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        } catch (IOException e) {
+            System.out.println("Error initializing stream");
+        }
+
+    }
 }

@@ -1,11 +1,14 @@
 package main.Classes;
 import main.DAB.DBUtil;
+
+import java.io.Serializable;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Figure {
+public class Figure implements Serializable {
 
+    private static final long serialVersionUID = 1L;
     protected String id;
     protected double volume;
     protected String type;
@@ -71,9 +74,9 @@ public class Figure {
 ////        }
 //    }
 
-    public void deleteFigure() {
-        //Delete a specific figure.
-    }
+//    public static void deleteFigure(int selectedIdx) throws SQLException, ClassNotFoundException {
+//
+//    }
 
     public void saveFigure() {
         //Save the figure.

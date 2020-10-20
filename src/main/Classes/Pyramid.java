@@ -1,5 +1,8 @@
 package main.Classes;
 
+import java.io.*;
+import java.sql.SQLException;
+
 public class Pyramid extends Figure {
 
     private double height;
@@ -42,12 +45,34 @@ public class Pyramid extends Figure {
         return volumeOfPyramid / 3;
     }
 
+    public static void deleteFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
+        PyramidDAO.deletePyramid(selectedIdx);
+    }
+
     @Override
     public String toString() {
         return "Pyramid{" +
-                "id=" + id +
-                "height=" + height +
+                "{id=" + id +
+                "}height=" + height +
                 ", baseLength=" + baseLength +
                 '}';
+    }
+
+    public static void writeFigureToFile(Pyramid pyramid) {
+
+        try {
+            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\TempmyObjects.ser"));
+            ObjectOutputStream o = new ObjectOutputStream(f);
+
+            o.writeObject(pyramid);
+
+            o.close();
+            f.close();
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        } catch (IOException e) {
+            System.out.println("Error initializing stream");
+        }
     }
 }

@@ -35,6 +35,17 @@ public class HemisphereDAO {
         }
     }
 
+    public static void deleteHemisphere(String selectedIdx) throws SQLException, ClassNotFoundException {
+        String sql = "DELETE FROM hemisphere where id = '" + selectedIdx + "';";
+        try {
+            DBUtil.dbExecuteQuery(sql);
+        } catch (SQLException e) {
+            System.out.println("Exception occur while inserting the data " + e);
+            e.printStackTrace();
+            throw e;
+        }
+    }
+
     public static ArrayList readAllHemispheres() throws SQLException, ClassNotFoundException {
         String sql = "SELECT * FROM hemisphere;";
         ArrayList<Hemisphere> hemispheres = new ArrayList<>();
