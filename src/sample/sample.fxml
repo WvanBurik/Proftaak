@@ -24,7 +24,6 @@
             <MenuItem mnemonicParsing="false" onAction="#stagePyramid" text="Pyramid" />
             <MenuItem mnemonicParsing="false" onAction="#stageSphere" text="Sphere" />
             <MenuItem mnemonicParsing="false" onAction="#stageHemisphere" text="Hemisphere" />
-            <MenuItem mnemonicParsing="false" onAction="#stageBlock" text="Block" />
         </items>
       </MenuButton>
       <Button layoutX="504.0" layoutY="423.0" mnemonicParsing="false" text="Save" />
@@ -40,5 +39,6 @@
             <Image url="@math.gif" />
          </image>
       </ImageView>
+      <Button layoutX="139.0" layoutY="423.0" mnemonicParsing="false" onAction="#display" text="Show" />
    </children>
 </AnchorPane>

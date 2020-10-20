@@ -25,16 +25,16 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8e1ab99-b1c0-4fb1-9100-f0285afa5a7a" name="Default Changelist" comment="To test: all cilinders added to the listview.&#10;The method showAllFigures in Controller.java added to test">
-      <change afterPath="$PROJECT_DIR$/src/sample/math.gif" afterDir="false" />
+    <list default="true" id="a8e1ab99-b1c0-4fb1-9100-f0285afa5a7a" name="Default Changelist" comment="Last update: GUI improvment and showallfigures.">
+      <change afterPath="$PROJECT_DIR$/src/main/Classes/BlockController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Figure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Figure.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Proftaak/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/sample/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Proftaak/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/sample/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/sample/block.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/sample/block.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Proftaak/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/sample/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Classes/Figure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Classes/Figure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/block.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/block.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603112794278</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Last update: GUI improvment and showallfigures.">
+      <created>1603195894899</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603195894899</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -156,7 +163,8 @@
     <MESSAGE value="All stages added" />
     <MESSAGE value="Last edit of the GUI and some functions" />
     <MESSAGE value="To test: all cilinders added to the listview.&#10;The method showAllFigures in Controller.java added to test" />
-    <option name="LAST_COMMIT_MESSAGE" value="To test: all cilinders added to the listview.&#10;The method showAllFigures in Controller.java added to test" />
+    <MESSAGE value="Last update: GUI improvment and showallfigures." />
+    <option name="LAST_COMMIT_MESSAGE" value="Last update: GUI improvment and showallfigures." />
   </component>
   <component name="WindowStateProjectService">
     <state x="140" y="56" width="1086" height="856" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601904374317">
@@ -187,22 +195,22 @@
       <screen x="0" y="0" width="1368" height="912" />
     </state>
     <state x="466" y="199" key="FileChooserDialogImpl/0.0.1368.912@0.0.1368.912" timestamp="1601992980012" />
-    <state width="1326" height="187" key="GridCell.Tab.0.bottom" timestamp="1603194901753">
+    <state width="1326" height="187" key="GridCell.Tab.0.bottom" timestamp="1603206618321">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state width="1326" height="187" key="GridCell.Tab.0.bottom/0.0.1368.912@0.0.1368.912" timestamp="1603194901753" />
-    <state width="1326" height="187" key="GridCell.Tab.0.center" timestamp="1603194901753">
+    <state width="1326" height="187" key="GridCell.Tab.0.bottom/0.0.1368.912@0.0.1368.912" timestamp="1603206618321" />
+    <state width="1326" height="187" key="GridCell.Tab.0.center" timestamp="1603206618320">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state width="1326" height="187" key="GridCell.Tab.0.center/0.0.1368.912@0.0.1368.912" timestamp="1603194901753" />
-    <state width="1326" height="187" key="GridCell.Tab.0.left" timestamp="1603194901753">
+    <state width="1326" height="187" key="GridCell.Tab.0.center/0.0.1368.912@0.0.1368.912" timestamp="1603206618320" />
+    <state width="1326" height="187" key="GridCell.Tab.0.left" timestamp="1603206618320">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state width="1326" height="187" key="GridCell.Tab.0.left/0.0.1368.912@0.0.1368.912" timestamp="1603194901753" />
-    <state width="1326" height="187" key="GridCell.Tab.0.right" timestamp="1603194901753">
+    <state width="1326" height="187" key="GridCell.Tab.0.left/0.0.1368.912@0.0.1368.912" timestamp="1603206618320" />
+    <state width="1326" height="187" key="GridCell.Tab.0.right" timestamp="1603206618321">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state width="1326" height="187" key="GridCell.Tab.0.right/0.0.1368.912@0.0.1368.912" timestamp="1603194901753" />
+    <state width="1326" height="187" key="GridCell.Tab.0.right/0.0.1368.912@0.0.1368.912" timestamp="1603206618321" />
     <state x="131" y="75" key="MergeDialog" timestamp="1602799706388">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
@@ -219,10 +227,10 @@
       <screen x="0" y="0" width="1368" height="912" />
     </state>
     <state x="165" y="31" key="SettingsEditor/0.0.1368.912@0.0.1368.912" timestamp="1602800240144" />
-    <state x="277" y="176" key="Vcs.Push.Dialog.v2" timestamp="1603112934308">
+    <state x="277" y="176" key="Vcs.Push.Dialog.v2" timestamp="1603195902521">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state x="277" y="176" key="Vcs.Push.Dialog.v2/0.0.1368.912@0.0.1368.912" timestamp="1603112934308" />
+    <state x="277" y="176" key="Vcs.Push.Dialog.v2/0.0.1368.912@0.0.1368.912" timestamp="1603195902521" />
     <state x="499" y="234" key="chooseDestDirectoryDialog" timestamp="1601903908081">
       <screen x="0" y="0" width="1368" height="912" />
     </state>

@@ -7,14 +7,18 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import main.Classes.*;
-
+import main.Classes.Figure;
+import main.Classes.FigureDAO;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
@@ -180,5 +184,31 @@ public class Controller implements Initializable {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+    }
+    public void display() {
+        Stage popupwindow=new Stage();
+        popupwindow.initModality(Modality.APPLICATION_MODAL);
+        popupwindow.setTitle("Figure specification");
+
+        Button button1= new Button("Close");
+        button1.setOnAction(e -> popupwindow.close());
+        VBox layout= new VBox(10);
+        Label label1= new Label(show_all.getSelectionModel().getSelectedItem());
+        layout.getChildren().addAll(label1, button1);
+        layout.setAlignment(Pos.CENTER);
+        Scene scene1= new Scene(layout, 500, 250);
+        popupwindow.setScene(scene1);
+       int selectedIdx = show_all.getSelectionModel().getSelectedIndex();
+//        show_all.getSelectionModel().selectedItemProperty();
+//        System.out.println(show_all.getSelectionModel().selectedItemProperty());
+
+
+
+        popupwindow.showAndWait();
+        
+        
+
+//        show_all.getItems().remove(selectedIdx);
+
     }
 }
