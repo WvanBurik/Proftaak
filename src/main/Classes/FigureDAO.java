@@ -3,6 +3,7 @@ package main.Classes;
 import main.DAB.DBUtil;
 
 import javax.xml.transform.Result;
+import java.io.*;
 import java.sql.Array;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -55,5 +56,39 @@ public class FigureDAO {
         }
         return totalVolume;
     }
+
+//    public static void writeFigureToFile() throws SQLException, ClassNotFoundException {
+//
+//        Block block = new Block(5, 30, 10);
+//        try {
+//            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\TempmyObjects.ser"));
+//            ObjectOutputStream o = new ObjectOutputStream(f);
+//
+//            o.writeObject(block);
+//
+//            o.close();
+//            f.close();
+//
+//            FileInputStream fi = new FileInputStream(new File("C:\\Users\\WesleyB\\Documents\\TempmyObjects.ser"));
+//            ObjectInputStream oi = new ObjectInputStream(fi);
+//
+//            // Read objects
+//            Block prBlock = (Block) oi.readObject();
+//
+//            System.out.println(block.toString());
+//
+//            oi.close();
+//            fi.close();
+//
+//        } catch (FileNotFoundException e) {
+//            System.out.println("File not found");
+//        } catch (IOException e) {
+//            System.out.println("Error initializing stream");
+//        } catch (ClassNotFoundException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        }
+//
+//    }
 
 }

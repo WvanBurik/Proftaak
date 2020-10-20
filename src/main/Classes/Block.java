@@ -1,9 +1,12 @@
 package main.Classes;
 
+import java.io.*;
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Block extends Figure {
 
+    private static final long serialVersionUID = 1L;
     private double length;
     private double width;
     private double height;
@@ -42,8 +45,9 @@ public class Block extends Figure {
         return height;
     }
 
-    public void createBlock() {
+    public void createBlock(double length, double width, double height) throws SQLException, ClassNotFoundException {
         //Create figure and go to interface implemented java class to insert record to database.
+        BlockDAO.insertBlock(length, width, height);
         System.out.println("Create block");
     }
 
@@ -80,5 +84,24 @@ public class Block extends Figure {
 
         System.out.println(content);
         return "" + content;
+    }
+
+    public static void writeFigureToFile(Block block) {
+
+        try {
+            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\TempmyObjects.ser"));
+            ObjectOutputStream o = new ObjectOutputStream(f);
+
+            o.writeObject(block);
+
+            o.close();
+            f.close();
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        } catch (IOException e) {
+            System.out.println("Error initializing stream");
+        }
+
     }
 }

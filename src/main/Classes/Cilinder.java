@@ -1,7 +1,10 @@
 package main.Classes;
 
+import java.io.*;
+
 public class Cilinder extends Figure {
 
+    private static final long serialVersionUID = 1L;
     private double height;
     private double radius;
     private final double pi = 3.14285714286;
@@ -54,5 +57,41 @@ public class Cilinder extends Figure {
                 ", radius=" + radius +
                 ", content=" + volume +
                 '}';
+    }
+
+    public static void writeFigureToFile(Cilinder cilinder) {
+
+        try {
+            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\TempmyObjects.ser"));
+            ObjectOutputStream o = new ObjectOutputStream(f);
+
+            o.writeObject(cilinder);
+
+            o.close();
+            f.close();
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        } catch (IOException e) {
+            System.out.println("Error initializing stream");
+        }
+    }
+
+    public static void writeFigureToFileAsText(Cilinder cilinder) {
+
+        try {
+            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\TempmyObjects.txt"));
+            ObjectOutputStream o = new ObjectOutputStream(f);
+
+            o.writeObject(cilinder);
+
+            o.close();
+            f.close();
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        } catch (IOException e) {
+            System.out.println("Error initializing stream");
+        }
     }
 }

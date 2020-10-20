@@ -1,11 +1,13 @@
 package main.Classes;
 
+import java.io.Serializable;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Figure {
+public class Figure implements Serializable {
 
+    private static final long serialVersionUID = 1L;
     protected String id;
     protected double volume;
     protected String type;
@@ -42,34 +44,34 @@ public class Figure {
         return null;
     }
 
-    public void createFigure(Figure figure) {
-        //Create a new figure
-        Block block = new Block();
-        Cilinder cilinder = new Cilinder();
-        Sphere sphere = new Sphere();
-
-        //Test to see if figure has a specified figure type to create.
-        System.out.println("Figure.createFigure figuur klasse is " + figure.toString());
-
-        if (figure.toString().equals(block.toString())) {
-            block.createBlock();
-        } else if (figure.toString().equals(cilinder.toString())) {
-            cilinder.createCilinder();
-        } else if (figure.toString().equals(sphere.toString())) {
-            sphere.createSphere();
-        }
-
-//        switch(figure.toString()) {
-//            case block.toString():
-//                // code block
-//                break;
-//            case cilinder:
-//                // code block
-//                break;
-//            default:
-//                // code block
+//    public void createFigure(Figure figure) {
+//        //Create a new figure
+//        Block block = new Block();
+//        Cilinder cilinder = new Cilinder();
+//        Sphere sphere = new Sphere();
+//
+//        //Test to see if figure has a specified figure type to create.
+//        System.out.println("Figure.createFigure figuur klasse is " + figure.toString());
+//
+//        if (figure.toString().equals(block.toString())) {
+//            block.createBlock();
+//        } else if (figure.toString().equals(cilinder.toString())) {
+//            cilinder.createCilinder();
+//        } else if (figure.toString().equals(sphere.toString())) {
+//            sphere.createSphere();
 //        }
-    }
+//
+////        switch(figure.toString()) {
+////            case block.toString():
+////                // code block
+////                break;
+////            case cilinder:
+////                // code block
+////                break;
+////            default:
+////                // code block
+////        }
+//    }
 
     public void deleteFigure() {
         //Delete a specific figure.
@@ -94,4 +96,5 @@ public class Figure {
         //Eerst huidig record naar database opslaan voor je alles ophaald en berekend.
         return 0.0;
     }
+    
 }

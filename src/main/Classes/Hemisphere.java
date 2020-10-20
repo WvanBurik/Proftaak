@@ -1,5 +1,7 @@
 package main.Classes;
 
+import java.io.*;
+
 public class Hemisphere extends Figure {
 
     private double radius;
@@ -45,4 +47,22 @@ public class Hemisphere extends Figure {
                 "radius=" + radius + '}';
     }
 
+    public static void writeFigureToFile(Hemisphere hemisphere) {
+
+        try {
+            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\TempmyObjects.ser"));
+            ObjectOutputStream o = new ObjectOutputStream(f);
+
+            o.writeObject(hemisphere);
+
+            o.close();
+            f.close();
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        } catch (IOException e) {
+            System.out.println("Error initializing stream");
+        }
+
+    }
 }

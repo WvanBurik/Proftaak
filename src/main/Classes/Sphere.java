@@ -1,5 +1,7 @@
 package main.Classes;
 
+import java.io.*;
+
 public class Sphere extends Figure {
 
     private final double pi = 3.14285714286;
@@ -45,5 +47,23 @@ public class Sphere extends Figure {
                 "radius=" + radius +
                 ", content=" + volume +
                 '}';
+    }
+
+    public static void writeFigureToFile(Sphere sphere) {
+
+        try {
+            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\TempmyObjects.ser"));
+            ObjectOutputStream o = new ObjectOutputStream(f);
+
+            o.writeObject(sphere);
+
+            o.close();
+            f.close();
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        } catch (IOException e) {
+            System.out.println("Error initializing stream");
+        }
     }
 }
