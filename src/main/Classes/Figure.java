@@ -42,34 +42,34 @@ public class Figure {
         return null;
     }
 
-    public void createFigure(Figure figure) {
-        //Create a new figure
-        Block block = new Block();
-        Cilinder cilinder = new Cilinder();
-        Sphere sphere = new Sphere();
-
-        //Test to see if figure has a specified figure type to create.
-        System.out.println("Figure.createFigure figuur klasse is " + figure.toString());
-
-        if (figure.toString().equals(block.toString())) {
-            block.createBlock();
-        } else if (figure.toString().equals(cilinder.toString())) {
-            cilinder.createCilinder();
-        } else if (figure.toString().equals(sphere.toString())) {
-            sphere.createSphere();
-        }
-
-//        switch(figure.toString()) {
-//            case block.toString():
-//                // code block
-//                break;
-//            case cilinder:
-//                // code block
-//                break;
-//            default:
-//                // code block
+//    public void createFigure(Figure figure) {
+//        //Create a new figure
+//        Block block = new Block();
+//        Cilinder cilinder = new Cilinder();
+//        Sphere sphere = new Sphere();
+//
+//        //Test to see if figure has a specified figure type to create.
+//        System.out.println("Figure.createFigure figuur klasse is " + figure.toString());
+//
+//        if (figure.toString().equals(block.toString())) {
+//            block.createBlock();
+//        } else if (figure.toString().equals(cilinder.toString())) {
+//            cilinder.createCilinder();
+//        } else if (figure.toString().equals(sphere.toString())) {
+//            sphere.createSphere();
 //        }
-    }
+//
+////        switch(figure.toString()) {
+////            case block.toString():
+////                // code block
+////                break;
+////            case cilinder:
+////                // code block
+////                break;
+////            default:
+////                // code block
+////        }
+//    }
 
     public void deleteFigure() {
         //Delete a specific figure.
@@ -82,7 +82,7 @@ public class Figure {
 
     //TODO Fix problems
     //Under construction
-    public double calculateTotalContent() throws SQLException, ClassNotFoundException {
+    public double calculateTotalVolume() throws SQLException, ClassNotFoundException {
         //Select * from database
         // Elk record volume bij elkaar optellen.
         ArrayList<Figure> figures = FigureDAO.readAllFigures();
@@ -94,14 +94,14 @@ public class Figure {
         //Eerst huidig record naar database opslaan voor je alles ophaald en berekend.
         return 0.0;
     }
-    public static void showAllFigures() throws SQLException, ClassNotFoundException {
-        String sql = "SELECT * FROM Cilinder;";
-        try {
-            DBUtil.dbExecuteQuery(sql);
-        } catch (SQLException e) {
-            System.out.println("Exception occur while inserting the data " + e);
-            e.printStackTrace();
-            throw e;
-        }
-    }
+//    public static void showAllFigures() throws SQLException, ClassNotFoundException {
+//        String sql = "SELECT * FROM Cilinder;";
+//        try {
+//            DBUtil.dbExecuteQuery(sql);
+//        } catch (SQLException e) {
+//            System.out.println("Exception occur while inserting the data " + e);
+//            e.printStackTrace();
+//            throw e;
+//        }
+//    }
 }
