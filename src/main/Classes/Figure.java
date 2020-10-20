@@ -1,5 +1,7 @@
 package main.Classes;
 import main.DAB.DBUtil;
+
+import java.io.Serializable;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
