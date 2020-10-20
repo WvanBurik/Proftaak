@@ -4,116 +4,64 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-//import javafx.scene.control.Label;
-import main.Classes.*;
+import main.Classes.FigureDAO;
 
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.UUID;
+import java.sql.*;
+
 
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Block block = new Block();
-        Cilinder cilinder = new Cilinder();
-        Sphere sphere = new Sphere();
-
-//        ArrayList<Figure> figures = new ArrayList<Figure>();
-//        figures.add(block);
 
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
-
-        ArrayList<Block> blocks = BlockDAO.readAllBlocks();
-
-
-        ComboBox comboBox = new ComboBox();
-        for (Block b : blocks) {
-            comboBox.getItems().add(b.toString());
-        }
-
-        HBox hbox = new HBox(comboBox);
-
-        Scene scene1 = new Scene(hbox, 200, 120);
-        primaryStage.setScene(scene1);
-
-//        Label label = new Label("" + block.calculateContent(5, 5, 5));
-//        Scene scene = new Scene(label, 400, 200);
-//        primaryStage.setScene(scene);
-
+        primaryStage.setTitle("VAT");
+        primaryStage.setScene(new Scene(root, 600, 500));
         primaryStage.show();
 
-        Figure figure = new Figure();
-//        figure.createFigure(comboBox.getCursor().toString());
     }
 
 
-//    public static void main(String[] args) {
-//        launch(args);
-//        Block block = new Block();
-//        Cilinder cilinder = new Cilinder();
-//        Sphere sphere = new Sphere();
-//        Figure figure = new Figure();
-//
-//
-//
-//        figure.createFigure(sphere);
-//    }
-
-//    public static void main(String[] args) {
-//        launch(args);
-//    }
-
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        Figure figure = new Figure();
-        Block block = new Block();
-        Sphere sphere = new Sphere();
-        Cilinder cilinder = new Cilinder();
-        Pyramid pyramid = new Pyramid();
-        Hemisphere hemisphere = new Hemisphere();
+        launch(args);
 
-        double figureVolume, blockVolume, sphereVolume, cilinderVolume, pyramidVolume, hemisphereVolume;
-
-        hemisphereVolume = hemisphere.calculateVolume(8);
-        System.out.println("volume of " + hemisphere.getType() + " is : " + hemisphereVolume);
-
-        sphereVolume = sphere.calculateVolume(48);
-        System.out.println("volume of " + sphere.getType() + " is : " + sphereVolume);
-
-        pyramidVolume = pyramid.calculateVolume(9, 10);
-        System.out.println("volume of " + pyramid.getType() + " is : " + pyramidVolume);
-
-        cilinderVolume = cilinder.calculateVolume(38, 35);
-        System.out.println("volume of " + cilinder.getType() + " is : " + cilinderVolume);
-
-        blockVolume = block.calculateVolume(5.5, 5.5, 5.5);
-        System.out.println("volume of " + block.getType() + " is : " + blockVolume);
-
-        //Block
-//        BlockDAO.insertBlock(2, 5.5, 3.5);
-////        BlockDAO.deleteAllBlocks();
-//        ArrayList<Block> blocks = BlockDAO.readAllBlocks();
-//        for (Block b : blocks) {
-//            System.out.println(b.toString());
+//        Figure figure = new Figure();
+//        Block block = new Block();
+//        Sphere sphere = new Sphere();
+//        Cilinder cilinder = new Cilinder();
+//        Pyramid pyramid = new Pyramid();
+//        Hemisphere hemisphere = new Hemisphere();
+//
+//        double figureVolume, blockVolume, sphereVolume, cilinderVolume, pyramidVolume, hemisphereVolume;
+//
+//        hemisphereVolume = hemisphere.calculateVolume(8);
+//        System.out.println("volume of " + hemisphere.getType() + " is : " + hemisphereVolume);
+//
+//        sphereVolume = sphere.calculateVolume(48);
+//        System.out.println("volume of " + sphere.getType() + " is : " + sphereVolume);
+//
+//        pyramidVolume = pyramid.calculateVolume(9, 10);
+//        System.out.println("volume of " + pyramid.getType() + " is : " + pyramidVolume);
+//
+//        cilinderVolume = cilinder.calculateVolume(38, 35);
+//        System.out.println("volume of " + cilinder.getType() + " is : " + cilinderVolume);
+//
+//        blockVolume = block.calculateVolume(5.5, 5.5, 5.5);
+//        System.out.println("volume of " + block.getType() + " is : " + blockVolume);
+//
+//
+//        ArrayList<Figure> figures = FigureDAO.readAllFigures();
+//        for (Figure f : figures) {
+//            System.out.println(f.toString());
 //        }
-
-        //Cilinder
-//        CilinderDAO.insertCilinder( 19, 17.5);
-//        CilinderDAO.deleteAllCilinders();
-
-        ArrayList<Figure> figures = FigureDAO.readAllFigures();
-        for (Figure f : figures) {
-            System.out.println(f.toString());
-        }
 
 //        System.out.println(FigureDAO.readAllFiguresForTotalVolume());
 
 //        System.out.println(figure.calculateTotalContent());
     }
+
+
 
 //    public static void main(String[] args) {
 //        Figure figure = new Figure();
@@ -128,29 +76,6 @@ public class Main extends Application {
 //    }
 
 //
-//public String calculateContentTEST() {
-//    double length;
-//    double width;
-//    double height;
-//    double content;
-//
-//    System.out.println("Wat is de lengte?");
-//    Scanner scan = new Scanner(System.in);
-//    length = Double.valueOf(scan.nextLine());
-//
-//    System.out.println("Wat is de breete?");
-//    scan = new Scanner(System.in);
-//    width = Double.valueOf(scan.nextLine());
-//
-//    System.out.println("Wat is de hoogte?");
-//    scan = new Scanner(System.in);
-//    height = Double.valueOf(scan.nextLine());
-//
-//    Block block = new Block(length, width, height);
-//    content = block.calculateContent(length, width, height);
-//
-//    System.out.println(content);
-//    return "" + content;
-//}
+
 }
 

@@ -55,7 +55,7 @@ public class Cilinder extends Figure {
                 "id=" + id +
                 "height=" + height +
                 ", radius=" + radius +
-                ", content=" + volume +
+                ", volume=" + volume +
                 '}';
     }
 

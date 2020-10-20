@@ -12,7 +12,7 @@ import java.util.UUID;
 
 public class HemisphereDAO {
 
-    public static void insertHemishpere(double height, double radius) throws SQLException, ClassNotFoundException {
+    public static void insertHemisphere(double radius) throws SQLException, ClassNotFoundException {
         String uniqueID = UUID.randomUUID().toString();
         String sql = "insert into hemisphere(ID, radius) values('" + uniqueID + "', '" + radius + "');";
         try {
@@ -54,4 +54,6 @@ public class HemisphereDAO {
         }
         return hemispheres;
     }
+
+
 }
