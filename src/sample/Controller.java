@@ -13,8 +13,8 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import main.Classes.*;
-
+import main.Classes.Figure;
+import main.Classes.FigureDAO;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
@@ -30,58 +30,57 @@ public class Controller implements Initializable {
     private ListView<String> show_all;
 
 
-    public void showAllFigures() throws SQLException, ClassNotFoundException {
-        ObservableList<String> items = FXCollections.observableArrayList();
-
-        Connection Conn = null;
-
-        try {
-            Conn = DriverManager.getConnection("jdbc:mysql://localhost/proftaak?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "root");
-            System.out.println("Verbonden met de database");
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-            System.out.println("Verbinding met de database is mislukt.");
-        }
-//        show_all.setItems(items);
-        Statement stmt = null;
-        ResultSet rs = null;
-        try {
-            stmt = Conn.createStatement();
-            rs = stmt.executeQuery("SELECT * FROM cilinder");
-
-            while (rs.next()) {
-                show_all.setItems(items);
-                items.add(rs.getString(2));
-                System.out.println("Height: "+rs.getString(2) +" Radius: "+ rs.getString(3));
-            }
-        } catch (SQLException e) {
-
-        }
-    }
-    public void showAllVolume() throws SQLException, ClassNotFoundException {
-        FigureDAO.readAllFiguresForTotalVolume();
-    }
-
+//    public void showAllFigures() throws SQLException, ClassNotFoundException {
+//        ObservableList<String> items = FXCollections.observableArrayList();
+//        Connection Conn = null;
 //
-//    //FXML annotations kijk yt video
-//    public void insertCilinder(ActionEvent event) throws SQLException, ClassNotFoundException, IOException {
-//
-//        CilinderDAO.insertCilinder(Double.parseDouble(height_cil.getText()), 3);
-////        CilinderDAO.deleteAllCilinders();
-//        ArrayList<Cilinder> cilinders = CilinderDAO.readAllCilinders();
-//        for (Cilinder c : cilinders) {
-//            System.out.println(c.toString());
+//        try {
+//            Conn = DriverManager.getConnection("jdbc:mysql://localhost/proftaak?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&allowMultiQueries=true", "root", "root");
+//            System.out.println("Verbonden met de database");
+//        } catch (SQLException e) {
+//            System.out.println(e.getMessage());
+//            System.out.println("Verbinding met de database is mislukt.");
 //        }
 //
-//    }
+//        Statement stmt = null;
+//        ResultSet rs = null;
+//        try {
+//            stmt = Conn.createStatement();
+//            rs = stmt.executeQuery("SELECT * FROM cilinder");
 //
-//    public void deleteAllCilinders() throws SQLException, ClassNotFoundException {
-//        CilinderDAO.deleteAllCilinders();
+//            while (rs.next()) {
+//                show_all.setItems(items);
+//                items.add(rs.getString(2));
+//                System.out.println("Height: " + rs.getString(2) + " Radius: " + rs.getString(3));
+//            }
+//        } catch (SQLException e) {
+//
+//        }
 //    }
 
-//    public void showAllFigures() throws SQLException, ClassNotFoundException {
-//        FigureDAO.readAllFigures();
-//    }
+    public void showAllFigures() throws SQLException, ClassNotFoundException {
+        ObservableList<String> items = FXCollections.observableArrayList();
+        ArrayList<Figure> figures = FigureDAO.readAllFigures();
+                show_all.setItems(items);
+                for (Figure f : figures) {
+                    items.add(f.toString());
+                    System.out.println(f.toString());
+                }
+
+
+    }
+
+    public void showAllVolume() throws SQLException, ClassNotFoundException {
+
+    }
+
+    public void deleteSelected() {
+        final int selectedIdx = show_all.getSelectionModel().getSelectedIndex();
+        show_all.getItems().remove(selectedIdx);
+
+
+    }
+
 
     public void stageCilinder(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("cilinder.fxml"));
@@ -104,6 +103,7 @@ public class Controller implements Initializable {
         stage.setScene(new Scene(root, 469, 157));
         stage.showAndWait();
     }
+
     public void stageHemisphere(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("hemisphere.fxml"));
         Parent root = fxmlLoader.load();
@@ -114,6 +114,7 @@ public class Controller implements Initializable {
         stage.setScene(new Scene(root, 469, 157));
         stage.showAndWait();
     }
+
     public void stageSphere(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sphere.fxml"));
         Parent root = fxmlLoader.load();
@@ -124,6 +125,7 @@ public class Controller implements Initializable {
         stage.setScene(new Scene(root, 469, 157));
         stage.showAndWait();
     }
+
     public void stagePyramid(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("pyramid.fxml"));
         Parent root = fxmlLoader.load();
