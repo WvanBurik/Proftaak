@@ -1,5 +1,6 @@
 package main.Classes;
 
+import javafx.fxml.FXML;
 import main.DAB.DBUtil;
 
 import javax.sql.rowset.CachedRowSet;
@@ -25,17 +26,17 @@ public class BlockDAO {
         }
     }
 
-    public static void deleteAllBlocks() throws SQLException, ClassNotFoundException{
-        String sql = "DELETE FROM Block;";
-        try {
-            DBUtil.dbExecuteQuery(sql);
-        }
-        catch (SQLException e) {
-            System.out.println("Exception occur while inserting the data " + e);
-            e.printStackTrace();
-            throw e;
-        }
-    }
+//    public static void deleteAllBlocks() throws SQLException, ClassNotFoundException{
+//        String sql = "DELETE FROM Block;";
+//        try {
+//            DBUtil.dbExecuteQuery(sql);
+//        }
+//        catch (SQLException e) {
+//            System.out.println("Exception occur while inserting the data " + e);
+//            e.printStackTrace();
+//            throw e;
+//        }
+//    }
 
     public static void deleteBlock(String selectedIdx) throws SQLException, ClassNotFoundException {
         String sql = "DELETE FROM Block where ID = '" + selectedIdx + "';";
@@ -69,5 +70,8 @@ public class BlockDAO {
             throw e;
         }
         return blocks;
+    }
+    public void calculateVolume() {
+
     }
 }

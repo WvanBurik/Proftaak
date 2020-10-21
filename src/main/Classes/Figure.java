@@ -85,18 +85,18 @@ public class Figure implements Serializable {
 
     //TODO Fix problems
     //Under construction
-    public double calculateTotalVolume() throws SQLException, ClassNotFoundException {
-        //Select * from database
-        // Elk record volume bij elkaar optellen.
-        ArrayList<Figure> figures = FigureDAO.readAllFigures();
-        for (Figure f : figures) {
-            f.calculateVolume();
-            System.out.println(f.toString() + f.volume);
-        }
-
-        //Eerst huidig record naar database opslaan voor je alles ophaald en berekend.
-        return 0.0;
-    }
+//    public double calculateTotalVolume() throws SQLException, ClassNotFoundException {
+//        //Select * from database
+//        // Elk record volume bij elkaar optellen.
+//        ArrayList<Figure> figures = FigureDAO.readAllFigures();
+//        for (Figure f : figures) {
+//            f.calculateVolume();
+//            System.out.println(f.toString() + f.volume);
+//        }
+//
+//        //Eerst huidig record naar database opslaan voor je alles ophaald en berekend.
+//        return 0.0;
+//    }
 //    public static void showAllFigures() throws SQLException, ClassNotFoundException {
 //        String sql = "SELECT * FROM Cilinder;";
 //        try {

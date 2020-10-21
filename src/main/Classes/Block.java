@@ -49,11 +49,11 @@ public class Block extends Figure {
         return height;
     }
 
-    public void createBlock(double length, double width, double height) throws SQLException, ClassNotFoundException {
-        //Create figure and go to interface implemented java class to insert record to database.
-        BlockDAO.insertBlock(length, width, height);
-        System.out.println("Create block");
-    }
+//    public void createBlock(double length, double width, double height) throws SQLException, ClassNotFoundException {
+//        //Create figure and go to interface implemented java class to insert record to database.
+//        BlockDAO.insertBlock(length, width, height);
+//        System.out.println("Create block");
+//    }
 
     @Override
     public String toString() {
@@ -65,30 +65,30 @@ public class Block extends Figure {
                 '}';
     }
 
-    public String calculateVolume() {
-        double length;
-        double width;
-        double height;
-        double content;
-
-        System.out.println("Wat is de lengte?");
-        Scanner scan = new Scanner(System.in);
-        length = Double.valueOf(scan.nextLine());
-
-        System.out.println("Wat is de breete?");
-        scan = new Scanner(System.in);
-        width = Double.valueOf(scan.nextLine());
-
-        System.out.println("Wat is de hoogte?");
-        scan = new Scanner(System.in);
-        height = Double.valueOf(scan.nextLine());
-
-        Block block = new Block(length, width, height);
-        content = block.calculateVolume(length, width, height);
-
-        System.out.println(content);
-        return "" + content;
-    }
+//    public String calculateVolume() {
+//        double length;
+//        double width;
+//        double height;
+//        double content;
+//
+//        System.out.println("Wat is de lengte?");
+//        Scanner scan = new Scanner(System.in);
+//        length = Double.valueOf(scan.nextLine());
+//
+//        System.out.println("Wat is de breete?");
+//        scan = new Scanner(System.in);
+//        width = Double.valueOf(scan.nextLine());
+//
+//        System.out.println("Wat is de hoogte?");
+//        scan = new Scanner(System.in);
+//        height = Double.valueOf(scan.nextLine());
+//
+//        Block block = new Block(length, width, height);
+//        content = block.calculateVolume(length, width, height);
+//
+//        System.out.println(content);
+//        return "" + content;
+//    }
 
     public static void writeFigureToFile(Block block) {
 

@@ -1,5 +1,6 @@
 package main.Classes;
 
+
 import java.io.*;
 import java.sql.SQLException;
 
@@ -37,22 +38,23 @@ public class Cilinder extends Figure {
         return radius;
     }
 
+
+
+
     @Override
     public double calculateVolume(double... value) {
+
         double heightOfCilinder = value[0];
         double radiusOfCilinder = value[1];
 
         return super.calculateVolume(pi, (radiusOfCilinder * radiusOfCilinder), heightOfCilinder);
+
     }
 
     public static void deleteFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
         CilinderDAO.deleteCilinder(selectedIdx);
     }
 
-    public void createCilinder() {
-        //Create figure and go to interface implemented java class to insert record to database.
-        System.out.println("create cilinder");
-    }
 
     @Override
     public String toString() {

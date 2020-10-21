@@ -17,8 +17,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import main.Classes.Figure;
-import main.Classes.FigureDAO;
+import main.Classes.*;
+
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
@@ -32,6 +32,8 @@ public class Controller implements Initializable {
 
     @FXML
     private ListView<String> show_all;
+    @FXML
+    private TextField figure_vol;
 
 
 //    public void showAllFigures() throws SQLException, ClassNotFoundException {
@@ -78,6 +80,43 @@ public class Controller implements Initializable {
 
         double totalVolume = FigureDAO.readAllFiguresForTotalVolume();
         total_volume_all.setText(String.valueOf(totalVolume));
+    }
+    public void showVolume() throws SQLException, ClassNotFoundException {
+        final int selectedIdx = show_all.getSelectionModel().getSelectedIndex();
+        final String getSelItem = show_all.getSelectionModel().getSelectedItem();
+
+        String DBId = getSelItem.substring(getSelItem.indexOf("{id") + 4, getSelItem.indexOf("}"));
+
+        String toStringVal = getSelItem;
+        int iend = toStringVal.indexOf("{");
+        String classString = "";
+
+        if (iend != -1)
+        {
+            classString= toStringVal.substring(0 , iend); //this will give abc
+        }
+
+        //
+        switch(classString) {
+            case "Block":
+                Block.deleteFigure(DBId);
+                break;
+            case "Cilinder":
+                Cilinder cilinder = new Cilinder();
+                cilinder.calculateVolume(cilinder.getHeight(),cilinder.getRadius());
+                System.out.println(cilinder);
+                break;
+            case "Hemisphere":
+                Hemisphere.deleteFigure(DBId);
+                break;
+            case "Pyramid":
+                Pyramid.deleteFigure(DBId);
+                break;
+            case "Sphere":
+                Sphere.deleteFigure(DBId);
+                break;
+        }
+
     }
 
     public void deleteSelected() throws SQLException, ClassNotFoundException {

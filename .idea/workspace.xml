@@ -26,15 +26,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8e1ab99-b1c0-4fb1-9100-f0285afa5a7a" name="Default Changelist" comment="Last update: GUI improvment and showallfigures.">
-      <change afterPath="$PROJECT_DIR$/src/main/Classes/BlockController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Block.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Block.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/BlockDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/BlockDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Cilinder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Cilinder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/CilinderDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/CilinderDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Figure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Figure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Hemisphere.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Hemisphere.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/HemisphereDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/HemisphereDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Pyramid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Pyramid.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Sphere.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Sphere.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Interfaces/IDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Interfaces/IDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/sample/Cilinder.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/sample/Cilinder.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Proftaak/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/sample/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/sample/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Proftaak/sample/block.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/sample/block.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Proftaak/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/sample/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Classes/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Classes/Block.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Classes/BlockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Classes/BlockController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Classes/BlockDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Classes/BlockDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Classes/Cilinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Classes/Cilinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Classes/CilinderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Classes/CilinderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Classes/Figure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Classes/Figure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Classes/PyramidController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Classes/PyramidController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Cilinder.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Cilinder.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/block.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/block.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/pyramid.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/pyramid.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -195,22 +212,22 @@
       <screen x="0" y="0" width="1368" height="912" />
     </state>
     <state x="466" y="199" key="FileChooserDialogImpl/0.0.1368.912@0.0.1368.912" timestamp="1601992980012" />
-    <state width="1326" height="187" key="GridCell.Tab.0.bottom" timestamp="1603206618321">
+    <state width="1326" height="187" key="GridCell.Tab.0.bottom" timestamp="1603289691258">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state width="1326" height="187" key="GridCell.Tab.0.bottom/0.0.1368.912@0.0.1368.912" timestamp="1603206618321" />
-    <state width="1326" height="187" key="GridCell.Tab.0.center" timestamp="1603206618320">
+    <state width="1326" height="187" key="GridCell.Tab.0.bottom/0.0.1368.912@0.0.1368.912" timestamp="1603289691258" />
+    <state width="1326" height="187" key="GridCell.Tab.0.center" timestamp="1603289691258">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state width="1326" height="187" key="GridCell.Tab.0.center/0.0.1368.912@0.0.1368.912" timestamp="1603206618320" />
-    <state width="1326" height="187" key="GridCell.Tab.0.left" timestamp="1603206618320">
+    <state width="1326" height="187" key="GridCell.Tab.0.center/0.0.1368.912@0.0.1368.912" timestamp="1603289691258" />
+    <state width="1326" height="187" key="GridCell.Tab.0.left" timestamp="1603289691258">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state width="1326" height="187" key="GridCell.Tab.0.left/0.0.1368.912@0.0.1368.912" timestamp="1603206618320" />
-    <state width="1326" height="187" key="GridCell.Tab.0.right" timestamp="1603206618321">
+    <state width="1326" height="187" key="GridCell.Tab.0.left/0.0.1368.912@0.0.1368.912" timestamp="1603289691258" />
+    <state width="1326" height="187" key="GridCell.Tab.0.right" timestamp="1603289691258">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state width="1326" height="187" key="GridCell.Tab.0.right/0.0.1368.912@0.0.1368.912" timestamp="1603206618321" />
+    <state width="1326" height="187" key="GridCell.Tab.0.right/0.0.1368.912@0.0.1368.912" timestamp="1603289691258" />
     <state x="131" y="75" key="MergeDialog" timestamp="1602799706388">
       <screen x="0" y="0" width="1368" height="912" />
     </state>

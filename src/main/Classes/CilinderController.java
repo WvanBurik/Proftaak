@@ -19,10 +19,10 @@ public class CilinderController {
 
         CilinderDAO.insertCilinder(Double.parseDouble(height_cil.getText()), Double.parseDouble(radius_cil.getText()));
 //        CilinderDAO.deleteAllCilinders();
-        ArrayList<Cilinder> cilinders = CilinderDAO.readAllCilinders();
-        for (Cilinder c : cilinders) {
-            System.out.println(c.toString());
-        }
+//        ArrayList<Cilinder> cilinders = CilinderDAO.readAllCilinders();
+//        for (Cilinder c : cilinders) {
+//            System.out.println(c.toString());
+//        }
 
     }
     public void cancelStage(){
