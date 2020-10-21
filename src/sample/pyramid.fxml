@@ -12,7 +12,7 @@
         <Text layoutX="14.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Base Length" />
         <TextField fx:id="base_pyr" layoutX="93.0" layoutY="85.0" prefHeight="25.0" prefWidth="81.0" />
         <Button layoutX="334.0" layoutY="118.0" mnemonicParsing="false" onAction="#insertPyramid" text="Ok" />
-        <Button layoutX="374.0" layoutY="118.0" mnemonicParsing="false" text="Cancel" />
+        <Button layoutX="374.0" layoutY="118.0" mnemonicParsing="false" onAction="#cancelStage" text="Cancel" />
         <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose the height and base length of the new pyramid:" />
     </children>
 </AnchorPane>

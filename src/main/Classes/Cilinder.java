@@ -1,5 +1,6 @@
 package main.Classes;
 
+
 import java.io.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -38,12 +39,17 @@ public class Cilinder extends Figure {
         return radius;
     }
 
+
+
+
     @Override
     public double calculateVolume(double... value) {
+
         double heightOfCilinder = value[0];
         double radiusOfCilinder = value[1];
 
         return super.calculateVolume(pi, (radiusOfCilinder * radiusOfCilinder), heightOfCilinder);
+
     }
 
     public static void deleteFigure(String selectedIdx) throws SQLException, ClassNotFoundException {

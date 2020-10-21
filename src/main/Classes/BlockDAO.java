@@ -1,5 +1,6 @@
 package main.Classes;
 
+import javafx.fxml.FXML;
 import main.DAB.DBUtil;
 import main.Interfaces.IDAO;
 import java.sql.ResultSet;
@@ -56,5 +57,8 @@ public class BlockDAO implements IDAO {
             throw e;
         }
         return blocks;
+    }
+    public void calculateVolume() {
+
     }
 }
