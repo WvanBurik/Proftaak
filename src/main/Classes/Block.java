@@ -88,7 +88,7 @@ public class Block extends Figure {
         Block.writeFigureToTxt(block);
     }
 
-    public static void writeFigureToTxt(Block block) {
+    private static void writeFigureToTxt(Block block) {
         try {
             FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\Block.txt"));
             ObjectOutputStream o = new ObjectOutputStream(f);
