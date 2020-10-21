@@ -2,18 +2,15 @@ package main.Classes;
 
 import javafx.fxml.FXML;
 import main.DAB.DBUtil;
-
-import javax.sql.rowset.CachedRowSet;
-import javax.xml.transform.Result;
+import main.Interfaces.IDAO;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.UUID;
 
-public class BlockDAO {
+public class BlockDAO implements IDAO {
 
-    public static void insertBlock(double length, double width, double height) throws SQLException, ClassNotFoundException {
+    public void insertBlock(double length, double width, double height) throws SQLException, ClassNotFoundException {
         String uniqueID = UUID.randomUUID().toString();
         String sql = "insert into block(ID, length, width, height) values('"+uniqueID+"', '"+length+"', '"+width+"', '"+height+"');";
         try {
@@ -26,19 +23,8 @@ public class BlockDAO {
         }
     }
 
-//    public static void deleteAllBlocks() throws SQLException, ClassNotFoundException{
-//        String sql = "DELETE FROM Block;";
-//        try {
-//            DBUtil.dbExecuteQuery(sql);
-//        }
-//        catch (SQLException e) {
-//            System.out.println("Exception occur while inserting the data " + e);
-//            e.printStackTrace();
-//            throw e;
-//        }
-//    }
-
-    public static void deleteBlock(String selectedIdx) throws SQLException, ClassNotFoundException {
+    @Override
+    public void deleteFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
         String sql = "DELETE FROM Block where ID = '" + selectedIdx + "';";
         try {
             DBUtil.dbExecuteQuery(sql);
@@ -49,7 +35,8 @@ public class BlockDAO {
         }
     }
 
-    public static ArrayList readAllBlocks() throws SQLException, ClassNotFoundException{
+    @Override
+    public ArrayList readAllFigures() throws SQLException, ClassNotFoundException {
         String sql = "SELECT * FROM Block;";
         ArrayList<Block> blocks = new ArrayList<>();
 

@@ -2,6 +2,7 @@ package main.Classes;
 
 import java.io.*;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class Pyramid extends Figure {
 
@@ -46,7 +47,18 @@ public class Pyramid extends Figure {
     }
 
     public static void deleteFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
-        PyramidDAO.deletePyramid(selectedIdx);
+        PyramidDAO pyramidDAO = new PyramidDAO();
+        pyramidDAO.deleteFigure(selectedIdx);
+    }
+
+    public static void createPyramid(double height, double baseLength) throws SQLException, ClassNotFoundException {
+        PyramidDAO pyramidDAO = new PyramidDAO();
+        pyramidDAO.insertPyramid(height, baseLength);
+    }
+
+    public static ArrayList readAllFigures() throws SQLException, ClassNotFoundException {
+        PyramidDAO pyramidDAO = new PyramidDAO();
+        return pyramidDAO.readAllFigures();
     }
 
     @Override
@@ -59,9 +71,26 @@ public class Pyramid extends Figure {
     }
 
     public static void writeFigureToFile(Pyramid pyramid) {
-
         try {
-            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\TempmyObjects.ser"));
+            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\Pyramid.ser"));
+            ObjectOutputStream o = new ObjectOutputStream(f);
+
+            o.writeObject(pyramid);
+
+            o.close();
+            f.close();
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        } catch (IOException e) {
+            System.out.println("Error initializing stream");
+        }
+        Pyramid.writeFigureToTxt(pyramid);
+    }
+
+    public static void writeFigureToTxt(Pyramid pyramid) {
+        try {
+            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\Pyramid.txt"));
             ObjectOutputStream o = new ObjectOutputStream(f);
 
             o.writeObject(pyramid);

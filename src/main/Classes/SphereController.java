@@ -12,11 +12,10 @@ public class SphereController {
     @FXML
     private TextField radius_sph;
 
-    //FXML annotations kijk yt video
     public void insertSphere(ActionEvent event) throws SQLException, ClassNotFoundException, IOException {
+        Sphere.createSphere(Double.parseDouble(radius_sph.getText()));
 
-        SphereDAO.insertSphere(Double.parseDouble(radius_sph.getText()));
-        ArrayList<Sphere> spheres = SphereDAO.readAllSpheres();
+        ArrayList<Sphere> spheres = Sphere.readAllFigures();
         for (Sphere s : spheres) {
             System.out.println(s.toString());
         }

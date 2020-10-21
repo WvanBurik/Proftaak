@@ -2,6 +2,7 @@ package main.Classes;
 
 import java.io.*;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class Hemisphere extends Figure {
 
@@ -29,11 +30,6 @@ public class Hemisphere extends Figure {
         return radius;
     }
 
-    public void createHemisphere() {
-        //Create figure and go to interface implemented java class to insert record to database.
-        System.out.println("createHemisphere");
-    }
-
     @Override
     public double calculateVolume(double... value) {
         double radiusForVolume = super.calculateVolume(value);
@@ -42,7 +38,18 @@ public class Hemisphere extends Figure {
     }
 
     public static void deleteFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
-        HemisphereDAO.deleteHemisphere(selectedIdx);
+        HemisphereDAO hemisphereDAO = new HemisphereDAO();
+        hemisphereDAO.deleteFigure(selectedIdx);
+    }
+
+    public static void createHemisphere(double radius) throws SQLException, ClassNotFoundException {
+        HemisphereDAO hemisphereDAO = new HemisphereDAO();
+        hemisphereDAO.insertHemisphere(radius);
+    }
+
+    public static ArrayList readAllFigures() throws SQLException, ClassNotFoundException {
+        HemisphereDAO hemisphereDAO = new HemisphereDAO();
+        return hemisphereDAO.readAllFigures();
     }
 
     @Override
@@ -53,7 +60,6 @@ public class Hemisphere extends Figure {
     }
 
     public static void writeFigureToFile(Hemisphere hemisphere) {
-
         try {
             FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\TempmyObjects.ser"));
             ObjectOutputStream o = new ObjectOutputStream(f);
@@ -68,6 +74,24 @@ public class Hemisphere extends Figure {
         } catch (IOException e) {
             System.out.println("Error initializing stream");
         }
+        Hemisphere.writeFigureToTxt(hemisphere);
+    }
 
+    public static void writeFigureToTxt(Hemisphere hemisphere) {
+
+        try {
+            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\Hemisphere.txt"));
+            ObjectOutputStream o = new ObjectOutputStream(f);
+
+            o.writeObject(hemisphere);
+
+            o.close();
+            f.close();
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        } catch (IOException e) {
+            System.out.println("Error initializing stream");
+        }
     }
 }

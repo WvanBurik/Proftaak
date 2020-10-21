@@ -2,6 +2,7 @@ package main.Classes;
 
 import java.io.*;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class Sphere extends Figure {
 
@@ -37,12 +38,18 @@ public class Sphere extends Figure {
     }
 
     public static void deleteFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
-        SphereDAO.deleteSphere(selectedIdx);
+        SphereDAO sphereDAO = new SphereDAO();
+        sphereDAO.deleteFigure(selectedIdx);
     }
 
-    public void createSphere() {
-        //Create figure and go to interface implemented java class to insert record to database.
-        System.out.println("createSphere");
+    public static void createSphere(double radius) throws SQLException, ClassNotFoundException {
+        SphereDAO sphereDAO = new SphereDAO();
+        sphereDAO.insertSphere(radius);
+    }
+
+    public static ArrayList readAllFigures() throws SQLException, ClassNotFoundException {
+        SphereDAO sphereDAO = new SphereDAO();
+        return sphereDAO.readAllFigures();
     }
 
     @Override
@@ -54,9 +61,26 @@ public class Sphere extends Figure {
     }
 
     public static void writeFigureToFile(Sphere sphere) {
-
         try {
-            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\TempmyObjects.ser"));
+            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\Sphere.ser"));
+            ObjectOutputStream o = new ObjectOutputStream(f);
+
+            o.writeObject(sphere);
+
+            o.close();
+            f.close();
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        } catch (IOException e) {
+            System.out.println("Error initializing stream");
+        }
+        Sphere.writeFigureToTxt(sphere);
+    }
+
+    public static void writeFigureToTxt(Sphere sphere) {
+        try {
+            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\Sphere.txt"));
             ObjectOutputStream o = new ObjectOutputStream(f);
 
             o.writeObject(sphere);
