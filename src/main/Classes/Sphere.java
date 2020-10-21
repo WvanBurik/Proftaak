@@ -52,6 +52,11 @@ public class Sphere extends Figure {
         return sphereDAO.readAllFigures();
     }
 
+    public static Sphere readFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
+        SphereDAO sphereDAO = new SphereDAO();
+        return sphereDAO.readFigure(selectedIdx);
+    }
+
     @Override
     public String toString() {
         return "Sphere{" +

@@ -53,4 +53,23 @@ public class HemisphereDAO implements IDAO {
         }
         return hemispheres;
     }
+
+    public Hemisphere readFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
+        String sql = "SELECT * FROM hemisphere where id = '" + selectedIdx + "';";
+        Hemisphere hemisphere = new Hemisphere();
+
+        try {
+            ResultSet rs = DBUtil.dbExecute(sql);
+            while (rs.next()) {
+                String ID = rs.getString("ID");
+                double radius = rs.getDouble("radius");
+                hemisphere = new Hemisphere(ID, radius);
+            }
+        } catch (SQLException e) {
+            System.out.println("Exception occur while inserting the data " + e);
+            e.printStackTrace();
+            throw e;
+        }
+        return hemisphere;
+    }
 }

@@ -42,6 +42,11 @@ public class Block extends Figure {
         return blockDAO.readAllFigures();
     }
 
+    public static Block readFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
+        BlockDAO blockDAO = new BlockDAO();
+        return blockDAO.readFigure(selectedIdx);
+    }
+
     @Override
     public String getType() {
         return "Block";

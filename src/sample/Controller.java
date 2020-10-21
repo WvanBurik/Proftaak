@@ -70,21 +70,24 @@ public class Controller implements Initializable {
         //
         switch(classString) {
             case "Block":
-                Block.deleteFigure(DBId);
+                Block block = Block.readFigure(DBId);
+                figure_vol.setText(String.valueOf(block.calculateVolume(block.getLength(), block.getWidth(), block.getHeight())));
                 break;
             case "Cilinder":
-                Cilinder cilinder = new Cilinder();
-                cilinder.calculateVolume(cilinder.getHeight(),cilinder.getRadius());
-                System.out.println(cilinder);
+                Cilinder cilinder = Cilinder.readFigure(DBId);
+                figure_vol.setText(String.valueOf(cilinder.calculateVolume(cilinder.getHeight(), cilinder.getRadius())));
                 break;
             case "Hemisphere":
-                Hemisphere.deleteFigure(DBId);
+                Hemisphere hemisphere = Hemisphere.readFigure(DBId);
+                figure_vol.setText(String.valueOf(hemisphere.calculateVolume(hemisphere.getRadius())));
                 break;
             case "Pyramid":
-                Pyramid.deleteFigure(DBId);
+                Pyramid pyramid = Pyramid.readFigure(DBId);
+                figure_vol.setText(String.valueOf(pyramid.calculateVolume(pyramid.getHeight(), pyramid.getBaseLength())));
                 break;
             case "Sphere":
-                Sphere.deleteFigure(DBId);
+                Sphere sphere = Sphere.readFigure(DBId);
+                figure_vol.setText(String.valueOf(sphere.calculateVolume(sphere.getRadius())));
                 break;
         }
 

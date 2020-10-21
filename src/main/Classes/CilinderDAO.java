@@ -55,4 +55,24 @@ public class CilinderDAO implements IDAO {
         }
         return cilinders;
     }
+
+    public Cilinder readFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
+        String sql = "SELECT * FROM Cilinder where ID = '" + selectedIdx + "';";
+        Cilinder cilinder = new Cilinder();
+
+        try {
+            ResultSet rs = DBUtil.dbExecute(sql);
+            while (rs.next()) {
+                String ID = rs.getString("ID");
+                double height = rs.getDouble("height");
+                double radius = rs.getDouble("radius");
+                cilinder = new Cilinder(ID, height, radius);
+            }
+        } catch (SQLException e) {
+            System.out.println("Exception occur while inserting the data " + e);
+            e.printStackTrace();
+            throw e;
+        }
+        return cilinder;
+    }
 }

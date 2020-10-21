@@ -54,4 +54,24 @@ public class PyramidDAO implements IDAO {
         }
         return pyramids;
     }
+
+    public Pyramid readFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
+        String sql = "SELECT * FROM Pyramid where id = '" + selectedIdx + "';";
+        Pyramid pyramid = new Pyramid();
+
+        try {
+            ResultSet rs = DBUtil.dbExecute(sql);
+            while (rs.next()) {
+                String ID = rs.getString("ID");
+                double height = rs.getDouble("height");
+                double baseLength = rs.getDouble("baseLength");
+                pyramid = new Pyramid(ID, height, baseLength);
+            }
+        } catch (SQLException e) {
+            System.out.println("Exception occur while inserting the data " + e);
+            e.printStackTrace();
+            throw e;
+        }
+        return pyramid;
+    }
 }

@@ -58,6 +58,29 @@ public class BlockDAO implements IDAO {
         }
         return blocks;
     }
+
+    public Block readFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
+        String sql = "SELECT * FROM Block where ID = '" + selectedIdx + "';";
+        Block block = new Block();
+
+        try {
+            ResultSet rs = DBUtil.dbExecute(sql);
+            while (rs.next()) {
+                String ID = rs.getString("ID");
+                double length = rs.getDouble("length");
+                double width = rs.getDouble("width");
+                double height = rs.getDouble("height");
+                block = new Block(ID, length, width, height);
+            }
+        }
+        catch (SQLException e) {
+            System.out.println("Exception occur while inserting the data " + e);
+            e.printStackTrace();
+            throw e;
+        }
+        return block;
+    }
+
     public void calculateVolume() {
 
     }

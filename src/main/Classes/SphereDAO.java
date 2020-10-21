@@ -53,4 +53,24 @@ public class SphereDAO implements IDAO {
         }
         return spheres;
     }
+
+    public Sphere readFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
+        String sql = "SELECT * FROM Sphere where id = '" + selectedIdx + "';";
+        Sphere returnSphere = new Sphere();
+
+        try {
+            ResultSet rs = DBUtil.dbExecute(sql);
+            while (rs.next()) {
+                String ID = rs.getString("ID");
+                double radius = rs.getDouble("radius");
+                Sphere sphere = new Sphere(ID, radius);
+                returnSphere = sphere;
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+            System.out.println("Exception occur while inserting the data " + e);
+            e.printStackTrace();
+            throw e;
+        }
+        return returnSphere;
+    }
 }
