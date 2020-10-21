@@ -61,6 +61,11 @@ public class Pyramid extends Figure {
         return pyramidDAO.readAllFigures();
     }
 
+    public static Pyramid readFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
+        PyramidDAO pyramidDAO = new PyramidDAO();
+        return pyramidDAO.readFigure(selectedIdx);
+    }
+
     @Override
     public String toString() {
         return "Pyramid{" +

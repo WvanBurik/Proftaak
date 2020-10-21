@@ -67,6 +67,11 @@ public class Cilinder extends Figure {
         return cilinderDAO.readAllFigures();
     }
 
+    public static Cilinder readFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
+        CilinderDAO cilinderDAO = new CilinderDAO();
+        return cilinderDAO.readFigure(selectedIdx);
+    }
+
     @Override
     public String toString() {
         return "Cilinder{" +
