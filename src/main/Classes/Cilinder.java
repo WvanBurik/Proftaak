@@ -2,6 +2,7 @@ package main.Classes;
 
 import java.io.*;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class Cilinder extends Figure {
 
@@ -46,12 +47,18 @@ public class Cilinder extends Figure {
     }
 
     public static void deleteFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
-        CilinderDAO.deleteCilinder(selectedIdx);
+        CilinderDAO cilinderDAO = new CilinderDAO();
+        cilinderDAO.deleteFigure(selectedIdx);
     }
 
-    public void createCilinder() {
-        //Create figure and go to interface implemented java class to insert record to database.
-        System.out.println("create cilinder");
+    public static void createCilinder(double height, double radius) throws SQLException, ClassNotFoundException {
+        CilinderDAO cilinderDAO = new CilinderDAO();
+        cilinderDAO.insertCilinder(height, radius);
+    }
+
+    public static ArrayList readAllFigures() throws SQLException, ClassNotFoundException {
+        CilinderDAO cilinderDAO = new CilinderDAO();
+        return cilinderDAO.readAllFigures();
     }
 
     @Override
@@ -66,7 +73,7 @@ public class Cilinder extends Figure {
     public static void writeFigureToFile(Cilinder cilinder) {
 
         try {
-            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\TempmyObjects.ser"));
+            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\Cilinder.ser"));
             ObjectOutputStream o = new ObjectOutputStream(f);
 
             o.writeObject(cilinder);
@@ -79,12 +86,13 @@ public class Cilinder extends Figure {
         } catch (IOException e) {
             System.out.println("Error initializing stream");
         }
+        Cilinder.writeFigureToTxt(cilinder);
     }
 
-    public static void writeFigureToFileAsText(Cilinder cilinder) {
+    public static void writeFigureToTxt(Cilinder cilinder) {
 
         try {
-            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\TempmyObjects.txt"));
+            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\Cilinder.txt"));
             ObjectOutputStream o = new ObjectOutputStream(f);
 
             o.writeObject(cilinder);

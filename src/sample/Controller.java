@@ -29,35 +29,6 @@ public class Controller implements Initializable {
     @FXML
     private ListView<String> show_all;
 
-
-//    public void showAllFigures() throws SQLException, ClassNotFoundException {
-//        ObservableList<String> items = FXCollections.observableArrayList();
-//        Connection Conn = null;
-//
-//        try {
-//            Conn = DriverManager.getConnection("jdbc:mysql://localhost/proftaak?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&allowMultiQueries=true", "root", "root");
-//            System.out.println("Verbonden met de database");
-//        } catch (SQLException e) {
-//            System.out.println(e.getMessage());
-//            System.out.println("Verbinding met de database is mislukt.");
-//        }
-//
-//        Statement stmt = null;
-//        ResultSet rs = null;
-//        try {
-//            stmt = Conn.createStatement();
-//            rs = stmt.executeQuery("SELECT * FROM cilinder");
-//
-//            while (rs.next()) {
-//                show_all.setItems(items);
-//                items.add(rs.getString(2));
-//                System.out.println("Height: " + rs.getString(2) + " Radius: " + rs.getString(3));
-//            }
-//        } catch (SQLException e) {
-//
-//        }
-//    }
-
     public void showAllFigures() throws SQLException, ClassNotFoundException {
         ObservableList<String> items = FXCollections.observableArrayList();
         ArrayList<Figure> figures = FigureDAO.readAllFigures();

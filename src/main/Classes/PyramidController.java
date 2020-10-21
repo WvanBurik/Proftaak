@@ -15,9 +15,9 @@ public class PyramidController {
     private TextField base_pyr;
 
     public void insertPyramid(ActionEvent event) throws SQLException, ClassNotFoundException, IOException {
+        Pyramid.createPyramid(Double.parseDouble(height_pyr.getText()), Double.parseDouble(base_pyr.getText()));
 
-        PyramidDAO.insertPyramid(Double.parseDouble(height_pyr.getText()), Double.parseDouble(base_pyr.getText()));
-        ArrayList<Pyramid> pyramids = PyramidDAO.readAllPyramids();
+        ArrayList<Pyramid> pyramids = Pyramid.readAllFigures();
         for (Pyramid p : pyramids) {
             System.out.println(p.toString());
         }

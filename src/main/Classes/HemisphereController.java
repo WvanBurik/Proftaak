@@ -12,11 +12,10 @@ public class HemisphereController {
     @FXML
     private TextField radius_hem;
 
-    //FXML annotations kijk yt video
     public void insertHemisphere(ActionEvent event) throws SQLException, ClassNotFoundException, IOException {
+        Hemisphere.createHemisphere(Double.parseDouble(radius_hem.getText()));
 
-        HemisphereDAO.insertHemisphere(Double.parseDouble(radius_hem.getText()));
-        ArrayList<Hemisphere> hemispheres = HemisphereDAO.readAllHemispheres();
+        ArrayList<Hemisphere> hemispheres = Hemisphere.readAllFigures();
         for (Hemisphere h : hemispheres) {
             System.out.println(h.toString());
         }

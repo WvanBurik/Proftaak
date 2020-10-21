@@ -1,25 +1,15 @@
 package main.Classes;
 
-import javafx.application.Platform;
-import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.stage.Stage;
 import main.DAB.DBUtil;
-import sample.Main;
-
-import javax.sql.rowset.CachedRowSet;
-import javax.xml.transform.Result;
-import java.io.IOException;
+import main.Interfaces.IDAO;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.UUID;
 
-public class CilinderDAO {
+public class CilinderDAO implements IDAO {
 
-    public static void insertCilinder(double height, double radius) throws SQLException, ClassNotFoundException {
+    public void insertCilinder(double height, double radius) throws SQLException, ClassNotFoundException {
         String uniqueID = UUID.randomUUID().toString();
         String sql = "insert into cilinder(ID, height, radius) values('" + uniqueID + "', '" + height + "', '" + radius + "');";
         try {
@@ -31,18 +21,8 @@ public class CilinderDAO {
         }
     }
 
-    public static void deleteAllCilinders() throws SQLException, ClassNotFoundException {
-        String sql = "DELETE FROM Cilinder;";
-        try {
-            DBUtil.dbExecuteQuery(sql);
-        } catch (SQLException e) {
-            System.out.println("Exception occur while inserting the data " + e);
-            e.printStackTrace();
-            throw e;
-        }
-    }
-
-    public static void deleteCilinder(String selectedIdx) throws SQLException, ClassNotFoundException {
+    @Override
+    public void deleteFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
         String sql = "DELETE FROM Cilinder where ID = '" + selectedIdx + "';";
 
         try {
@@ -54,7 +34,8 @@ public class CilinderDAO {
         }
     }
 
-    public static ArrayList readAllCilinders() throws SQLException, ClassNotFoundException {
+    @Override
+    public ArrayList readAllFigures() throws SQLException, ClassNotFoundException {
         String sql = "SELECT * FROM Cilinder;";
         ArrayList<Cilinder> cilinders = new ArrayList<>();
 
@@ -74,5 +55,4 @@ public class CilinderDAO {
         }
         return cilinders;
     }
-
 }

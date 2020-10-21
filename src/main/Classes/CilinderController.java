@@ -14,12 +14,10 @@ public class CilinderController {
     @FXML
     private TextField radius_cil;
 
-    //FXML annotations kijk yt video
     public void insertCilinder(ActionEvent event) throws SQLException, ClassNotFoundException, IOException {
+        Cilinder.createCilinder(Double.parseDouble(height_cil.getText()), Double.parseDouble(radius_cil.getText()));
 
-        CilinderDAO.insertCilinder(Double.parseDouble(height_cil.getText()), Double.parseDouble(radius_cil.getText()));
-//        CilinderDAO.deleteAllCilinders();
-        ArrayList<Cilinder> cilinders = CilinderDAO.readAllCilinders();
+        ArrayList<Cilinder> cilinders = Cilinder.readAllFigures();
         for (Cilinder c : cilinders) {
             System.out.println(c.toString());
         }
