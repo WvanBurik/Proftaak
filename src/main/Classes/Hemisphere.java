@@ -52,6 +52,12 @@ public class Hemisphere extends Figure {
         return hemisphereDAO.readAllFigures();
     }
 
+    public static Hemisphere readFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
+        HemisphereDAO hemisphereDAO = new HemisphereDAO();
+        return hemisphereDAO.readFigure(selectedIdx);
+    }
+
+
     @Override
     public String toString() {
         return "Hemisphere{" +
