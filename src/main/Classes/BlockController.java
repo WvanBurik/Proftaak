@@ -18,7 +18,7 @@ public class BlockController {
     //FXML annotations kijk yt video
     public void insertBlock(ActionEvent event) throws SQLException, ClassNotFoundException, IOException {
 
-        BlockDAO.insertBlock(Double.parseDouble(lngt_block.getText()), Double.parseDouble(wid_block.getText()), Double.parseDouble(hght_block.getText()));
+        Block.createBlock(Double.parseDouble(lngt_block.getText()), Double.parseDouble(wid_block.getText()), Double.parseDouble(hght_block.getText()));
 
     }
 

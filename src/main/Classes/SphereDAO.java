@@ -1,18 +1,15 @@
 package main.Classes;
 
 import main.DAB.DBUtil;
-
-import javax.sql.rowset.CachedRowSet;
-import javax.xml.transform.Result;
+import main.Interfaces.IDAO;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.UUID;
 
-public class SphereDAO {
+public class SphereDAO implements IDAO {
 
-    public static void insertSphere(double radius) throws SQLException, ClassNotFoundException {
+    public void insertSphere(double radius) throws SQLException, ClassNotFoundException {
         String uniqueID = UUID.randomUUID().toString();
         String sql = "insert into Sphere(ID, radius) values('" + uniqueID + "', '" + radius + "');";
         try {
@@ -24,18 +21,8 @@ public class SphereDAO {
         }
     }
 
-    public static void deleteAllSphere() throws SQLException, ClassNotFoundException {
-        String sql = "DELETE FROM Sphere;";
-        try {
-            DBUtil.dbExecuteQuery(sql);
-        } catch (SQLException e) {
-            System.out.println("Exception occur while inserting the data " + e);
-            e.printStackTrace();
-            throw e;
-        }
-    }
-
-    public static void deleteSphere(String selectedIdx) throws SQLException, ClassNotFoundException {
+    @Override
+    public void deleteFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
         String sql = "DELETE FROM Sphere where id = '" + selectedIdx + "';";
         try {
             DBUtil.dbExecuteQuery(sql);
@@ -46,7 +33,8 @@ public class SphereDAO {
         }
     }
 
-    public static ArrayList readAllSpheres() throws SQLException, ClassNotFoundException {
+    @Override
+    public ArrayList readAllFigures() throws SQLException, ClassNotFoundException {
         String sql = "SELECT * FROM Sphere;";
         ArrayList<Sphere> spheres = new ArrayList<>();
 
@@ -58,7 +46,7 @@ public class SphereDAO {
                 Sphere sphere = new Sphere(ID, radius);
                 spheres.add(sphere);
             }
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             System.out.println("Exception occur while inserting the data " + e);
             e.printStackTrace();
             throw e;

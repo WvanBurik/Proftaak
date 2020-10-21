@@ -2,7 +2,7 @@ package main.Classes;
 
 import java.io.*;
 import java.sql.SQLException;
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Block extends Figure {
 
@@ -28,9 +28,19 @@ public class Block extends Figure {
     }
 
     public static void deleteFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
-        BlockDAO.deleteBlock(selectedIdx);
+        BlockDAO blockDAO = new BlockDAO();
+        blockDAO.deleteFigure(selectedIdx);
     }
 
+    public static void createBlock(double length, double width, double height) throws SQLException, ClassNotFoundException {
+        BlockDAO blockDAO = new BlockDAO();
+        blockDAO.insertBlock(height, width, height);
+    }
+
+    public static ArrayList readAllFigures() throws SQLException, ClassNotFoundException {
+        BlockDAO blockDAO = new BlockDAO();
+        return blockDAO.readAllFigures();
+    }
 
     @Override
     public String getType() {
@@ -49,11 +59,6 @@ public class Block extends Figure {
         return height;
     }
 
-//    public void createBlock(double length, double width, double height) throws SQLException, ClassNotFoundException {
-//        //Create figure and go to interface implemented java class to insert record to database.
-//        BlockDAO.insertBlock(length, width, height);
-//        System.out.println("Create block");
-//    }
 
     @Override
     public String toString() {
@@ -65,35 +70,9 @@ public class Block extends Figure {
                 '}';
     }
 
-//    public String calculateVolume() {
-//        double length;
-//        double width;
-//        double height;
-//        double content;
-//
-//        System.out.println("Wat is de lengte?");
-//        Scanner scan = new Scanner(System.in);
-//        length = Double.valueOf(scan.nextLine());
-//
-//        System.out.println("Wat is de breete?");
-//        scan = new Scanner(System.in);
-//        width = Double.valueOf(scan.nextLine());
-//
-//        System.out.println("Wat is de hoogte?");
-//        scan = new Scanner(System.in);
-//        height = Double.valueOf(scan.nextLine());
-//
-//        Block block = new Block(length, width, height);
-//        content = block.calculateVolume(length, width, height);
-//
-//        System.out.println(content);
-//        return "" + content;
-//    }
-
     public static void writeFigureToFile(Block block) {
-
         try {
-            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\TempmyObjects.ser"));
+            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\Block.ser"));
             ObjectOutputStream o = new ObjectOutputStream(f);
 
             o.writeObject(block);
@@ -106,6 +85,23 @@ public class Block extends Figure {
         } catch (IOException e) {
             System.out.println("Error initializing stream");
         }
+        Block.writeFigureToTxt(block);
+    }
 
+    private static void writeFigureToTxt(Block block) {
+        try {
+            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\Block.txt"));
+            ObjectOutputStream o = new ObjectOutputStream(f);
+
+            o.writeObject(block);
+
+            o.close();
+            f.close();
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        } catch (IOException e) {
+            System.out.println("Error initializing stream");
+        }
     }
 }
