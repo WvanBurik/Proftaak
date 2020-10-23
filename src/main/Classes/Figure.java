@@ -1,7 +1,6 @@
 package main.Classes;
 
 import java.io.Serializable;
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class Figure implements Serializable {
