@@ -96,7 +96,7 @@ public class Cilinder extends Figure {
         Cilinder.writeFigureToTxt(cilinder);
     }
 
-    public static void writeFigureToTxt(Cilinder cilinder) {
+    private static void writeFigureToTxt(Cilinder cilinder) {
 
         try {
             FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\Cilinder.txt"));

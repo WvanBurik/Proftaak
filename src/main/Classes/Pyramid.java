@@ -93,7 +93,7 @@ public class Pyramid extends Figure {
         Pyramid.writeFigureToTxt(pyramid);
     }
 
-    public static void writeFigureToTxt(Pyramid pyramid) {
+    private static void writeFigureToTxt(Pyramid pyramid) {
         try {
             FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\Pyramid.txt"));
             ObjectOutputStream o = new ObjectOutputStream(f);
