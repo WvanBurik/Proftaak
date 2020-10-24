@@ -12,7 +12,7 @@
         <Text layoutX="14.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Width" />
         <TextField fx:id="wid_block" layoutX="58.0" layoutY="85.0" prefHeight="25.0" prefWidth="81.0" />
         <Button layoutX="334.0" layoutY="118.0" mnemonicParsing="false" onAction="#insertBlock" text="Ok" />
-        <Button layoutX="374.0" layoutY="118.0" mnemonicParsing="false" text="Cancel" />
+        <Button layoutX="374.0" layoutY="118.0" mnemonicParsing="false" onAction="#cancelStage" text="Cancel" />
         <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose the height and radius of the new block:" />
       <Text layoutX="14.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Height" />
       <TextField fx:id="hght_block" layoutX="58.0" layoutY="120.0" prefHeight="25.0" prefWidth="81.0" />

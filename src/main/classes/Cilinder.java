@@ -77,7 +77,7 @@ public class Cilinder extends Figure {
     public static void writeFigureToFile(Cilinder cilinder) {
 
         try {
-            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\Cilinder.ser"));
+            FileOutputStream f = new FileOutputStream(new File("D:\\Cilinder.ser"));
             ObjectOutputStream o = new ObjectOutputStream(f);
 
             o.writeObject(cilinder);
@@ -96,7 +96,7 @@ public class Cilinder extends Figure {
     private static void writeFigureToTxt(Cilinder cilinder) {
 
         try {
-            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\Cilinder.txt"));
+            FileOutputStream f = new FileOutputStream(new File("D:\\Cilinder.txt"));
             ObjectOutputStream o = new ObjectOutputStream(f);
 
             o.writeObject(cilinder);

@@ -20,7 +20,7 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:Ammar" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:Dev" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
@@ -37,13 +37,10 @@
       <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Pyramid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Pyramid.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Sphere.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Sphere.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Interfaces/IDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Interfaces/IDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/sample/Cilinder.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/sample/Cilinder.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Proftaak/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/sample/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Classes/Figure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Classes/Figure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Cilinder.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Cilinder.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/block.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/block.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/sample/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/sample/block.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/sample/block.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Classes/Cilinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Classes/Cilinder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603305096427</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Ammar:Save to file button added met bugfixes">
+      <created>1603475781575</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1603475781576</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -159,7 +163,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Ammar" />
+                        <option value="Dev" />
                       </list>
                     </value>
                   </entry>
@@ -180,7 +184,8 @@
     <MESSAGE value="To test: all cilinders added to the listview.&#10;The method showAllFigures in Controller.java added to test" />
     <MESSAGE value="Last update: GUI improvment and showallfigures." />
     <MESSAGE value="Last push before new structure edited" />
-    <option name="LAST_COMMIT_MESSAGE" value="Last push before new structure edited" />
+    <MESSAGE value="Ammar:Save to file button added met bugfixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ammar:Save to file button added met bugfixes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="140" y="56" width="1086" height="856" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601904374317">
@@ -211,22 +216,22 @@
       <screen x="0" y="0" width="1368" height="912" />
     </state>
     <state x="466" y="199" key="FileChooserDialogImpl/0.0.1368.912@0.0.1368.912" timestamp="1601992980012" />
-    <state width="1326" height="187" key="GridCell.Tab.0.bottom" timestamp="1603382874116">
+    <state width="1326" height="187" key="GridCell.Tab.0.bottom" timestamp="1603565192604">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state width="1326" height="187" key="GridCell.Tab.0.bottom/0.0.1368.912@0.0.1368.912" timestamp="1603382874116" />
-    <state width="1326" height="187" key="GridCell.Tab.0.center" timestamp="1603382874115">
+    <state width="1326" height="187" key="GridCell.Tab.0.bottom/0.0.1368.912@0.0.1368.912" timestamp="1603565192604" />
+    <state width="1326" height="187" key="GridCell.Tab.0.center" timestamp="1603565192603">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state width="1326" height="187" key="GridCell.Tab.0.center/0.0.1368.912@0.0.1368.912" timestamp="1603382874115" />
-    <state width="1326" height="187" key="GridCell.Tab.0.left" timestamp="1603382874115">
+    <state width="1326" height="187" key="GridCell.Tab.0.center/0.0.1368.912@0.0.1368.912" timestamp="1603565192603" />
+    <state width="1326" height="187" key="GridCell.Tab.0.left" timestamp="1603565192603">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state width="1326" height="187" key="GridCell.Tab.0.left/0.0.1368.912@0.0.1368.912" timestamp="1603382874115" />
-    <state width="1326" height="187" key="GridCell.Tab.0.right" timestamp="1603382874115">
+    <state width="1326" height="187" key="GridCell.Tab.0.left/0.0.1368.912@0.0.1368.912" timestamp="1603565192603" />
+    <state width="1326" height="187" key="GridCell.Tab.0.right" timestamp="1603565192604">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state width="1326" height="187" key="GridCell.Tab.0.right/0.0.1368.912@0.0.1368.912" timestamp="1603382874115" />
+    <state width="1326" height="187" key="GridCell.Tab.0.right/0.0.1368.912@0.0.1368.912" timestamp="1603565192604" />
     <state x="131" y="75" key="MergeDialog" timestamp="1602799706388">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
@@ -243,10 +248,10 @@
       <screen x="0" y="0" width="1368" height="912" />
     </state>
     <state x="165" y="31" key="SettingsEditor/0.0.1368.912@0.0.1368.912" timestamp="1602800240144" />
-    <state x="277" y="176" key="Vcs.Push.Dialog.v2" timestamp="1603305100929">
+    <state x="277" y="176" key="Vcs.Push.Dialog.v2" timestamp="1603475802407">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state x="277" y="176" key="Vcs.Push.Dialog.v2/0.0.1368.912@0.0.1368.912" timestamp="1603305100929" />
+    <state x="277" y="176" key="Vcs.Push.Dialog.v2/0.0.1368.912@0.0.1368.912" timestamp="1603475802407" />
     <state x="499" y="234" key="chooseDestDirectoryDialog" timestamp="1601903908081">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
