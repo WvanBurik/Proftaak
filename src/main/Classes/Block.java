@@ -34,7 +34,7 @@ public class Block extends Figure {
 
     public static void createBlock(double length, double width, double height) throws SQLException, ClassNotFoundException {
         BlockDAO blockDAO = new BlockDAO();
-        blockDAO.insertBlock(height, width, height);
+        blockDAO.insertFigure(length, width, height);
     }
 
     public static ArrayList readAllFigures() throws SQLException, ClassNotFoundException {

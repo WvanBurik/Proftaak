@@ -44,7 +44,7 @@ public class Sphere extends Figure {
 
     public static void createSphere(double radius) throws SQLException, ClassNotFoundException {
         SphereDAO sphereDAO = new SphereDAO();
-        sphereDAO.insertSphere(radius);
+        sphereDAO.insertFigure(radius);
     }
 
     public static ArrayList readAllFigures() throws SQLException, ClassNotFoundException {
@@ -83,7 +83,7 @@ public class Sphere extends Figure {
         Sphere.writeFigureToTxt(sphere);
     }
 
-    public static void writeFigureToTxt(Sphere sphere) {
+    private static void writeFigureToTxt(Sphere sphere) {
         try {
             FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\Sphere.txt"));
             ObjectOutputStream o = new ObjectOutputStream(f);

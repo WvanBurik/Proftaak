@@ -9,5 +9,5 @@ public interface IDAO {
 
     public ArrayList readAllFigures() throws SQLException, ClassNotFoundException;
 
-
+    public void insertFigure(double... value) throws SQLException, ClassNotFoundException;
 }

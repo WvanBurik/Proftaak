@@ -9,18 +9,6 @@ import java.util.UUID;
 
 public class PyramidDAO implements IDAO {
 
-    public void insertPyramid(double height, double baseLength) throws SQLException, ClassNotFoundException {
-        String uniqueID = UUID.randomUUID().toString();
-        String sql = "insert into Pyramid(ID, height, baseLength) values('" + uniqueID + "', '" + height + "', '" + baseLength + "');";
-        try {
-            DBUtil.dbExecuteQuery(sql);
-        } catch (SQLException e) {
-            System.out.println("Exception occur while inserting the data " + e);
-            e.printStackTrace();
-            throw e;
-        }
-    }
-
     @Override
     public void deleteFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
         String sql = "DELETE FROM Pyramid where id = '" + selectedIdx + "';";
@@ -53,6 +41,19 @@ public class PyramidDAO implements IDAO {
             throw e;
         }
         return pyramids;
+    }
+
+    @Override
+    public void insertFigure(double... value) throws SQLException, ClassNotFoundException {
+        String uniqueID = UUID.randomUUID().toString();
+        String sql = "insert into Pyramid(ID, height, baseLength) values('" + uniqueID + "', '" + value[0] + "', '" + value[1] + "');";
+        try {
+            DBUtil.dbExecuteQuery(sql);
+        } catch (SQLException e) {
+            System.out.println("Exception occur while inserting the data " + e);
+            e.printStackTrace();
+            throw e;
+        }
     }
 
     public Pyramid readFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
