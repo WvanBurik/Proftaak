@@ -1,4 +1,6 @@
-package main.Classes;
+package main.classes;
+
+import main.dao.CilinderDAO;
 
 import java.io.*;
 import java.sql.SQLException;
@@ -23,11 +25,6 @@ public class Cilinder extends Figure {
     }
 
     public Cilinder() {
-    }
-
-    @Override
-    public String getType() {
-        return "Cilinder";
     }
 
     public double getHeight() {
