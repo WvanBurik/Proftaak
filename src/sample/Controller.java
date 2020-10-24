@@ -66,7 +66,6 @@ public class Controller implements Initializable {
             classString= toStringVal.substring(0 , iend); //this will give abc
         }
 
-        //
         switch(classString) {
             case "Block":
                 Block block = Block.readFigure(DBId);
@@ -197,7 +196,7 @@ public class Controller implements Initializable {
             e.printStackTrace();
         }
     }
-    public void display() {
+    public void display() throws SQLException, ClassNotFoundException {
         Stage popupwindow=new Stage();
         popupwindow.initModality(Modality.APPLICATION_MODAL);
         popupwindow.setTitle("Figure specification");
@@ -205,7 +204,19 @@ public class Controller implements Initializable {
         Button button1= new Button("Close");
         button1.setOnAction(e -> popupwindow.close());
         Button button2= new Button("Write to File");
-        button2.setOnAction(e -> System.exit(0)); //todo add function to this button
+//        button2.setOnAction(e -> System.exit(0)); //todo add function to this button
+
+        button2.setOnAction(e -> {
+            try {
+                Figure.switchFigureToWriteToFile(show_all.getSelectionModel().getSelectedItem());
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            } catch (ClassNotFoundException classNotFoundException) {
+                classNotFoundException.printStackTrace();
+            }
+        }); //todo add function to this button
+
+
         VBox layout= new VBox(10);
         Label label1= new Label(show_all.getSelectionModel().getSelectedItem());
         layout.getChildren().addAll(label1, button1, button2);

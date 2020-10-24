@@ -53,7 +53,7 @@ public class Pyramid extends Figure {
 
     public static void createPyramid(double height, double baseLength) throws SQLException, ClassNotFoundException {
         PyramidDAO pyramidDAO = new PyramidDAO();
-        pyramidDAO.insertPyramid(height, baseLength);
+        pyramidDAO.insertFigure(height, baseLength);
     }
 
     public static ArrayList readAllFigures() throws SQLException, ClassNotFoundException {
@@ -93,7 +93,7 @@ public class Pyramid extends Figure {
         Pyramid.writeFigureToTxt(pyramid);
     }
 
-    public static void writeFigureToTxt(Pyramid pyramid) {
+    private static void writeFigureToTxt(Pyramid pyramid) {
         try {
             FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\Pyramid.txt"));
             ObjectOutputStream o = new ObjectOutputStream(f);

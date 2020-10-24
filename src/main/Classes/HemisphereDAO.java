@@ -9,18 +9,6 @@ import java.util.UUID;
 
 public class HemisphereDAO implements IDAO {
 
-    public void insertHemisphere(double radius) throws SQLException, ClassNotFoundException {
-        String uniqueID = UUID.randomUUID().toString();
-        String sql = "insert into hemisphere(ID, radius) values('" + uniqueID + "', '" + radius + "');";
-        try {
-            DBUtil.dbExecuteQuery(sql);
-        } catch (SQLException e) {
-            System.out.println("Exception occur while inserting the data " + e);
-            e.printStackTrace();
-            throw e;
-        }
-    }
-
     @Override
     public void deleteFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
         String sql = "DELETE FROM hemisphere where id = '" + selectedIdx + "';";
@@ -52,6 +40,19 @@ public class HemisphereDAO implements IDAO {
             throw e;
         }
         return hemispheres;
+    }
+
+    @Override
+    public void insertFigure(double... value) throws SQLException, ClassNotFoundException {
+        String uniqueID = UUID.randomUUID().toString();
+        String sql = "insert into hemisphere(ID, radius) values('" + uniqueID + "', '" + value[0] + "');";
+        try {
+            DBUtil.dbExecuteQuery(sql);
+        } catch (SQLException e) {
+            System.out.println("Exception occur while inserting the data " + e);
+            e.printStackTrace();
+            throw e;
+        }
     }
 
     public Hemisphere readFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
