@@ -44,7 +44,7 @@ public class Sphere extends Figure {
 
     public static void createSphere(double radius) throws SQLException, ClassNotFoundException {
         SphereDAO sphereDAO = new SphereDAO();
-        sphereDAO.insertSphere(radius);
+        sphereDAO.insertFigure(radius);
     }
 
     public static ArrayList readAllFigures() throws SQLException, ClassNotFoundException {

@@ -53,7 +53,7 @@ public class Pyramid extends Figure {
 
     public static void createPyramid(double height, double baseLength) throws SQLException, ClassNotFoundException {
         PyramidDAO pyramidDAO = new PyramidDAO();
-        pyramidDAO.insertPyramid(height, baseLength);
+        pyramidDAO.insertFigure(height, baseLength);
     }
 
     public static ArrayList readAllFigures() throws SQLException, ClassNotFoundException {

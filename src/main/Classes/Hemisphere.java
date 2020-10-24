@@ -44,7 +44,7 @@ public class Hemisphere extends Figure {
 
     public static void createHemisphere(double radius) throws SQLException, ClassNotFoundException {
         HemisphereDAO hemisphereDAO = new HemisphereDAO();
-        hemisphereDAO.insertHemisphere(radius);
+        hemisphereDAO.insertFigure(radius);
     }
 
     public static ArrayList readAllFigures() throws SQLException, ClassNotFoundException {
@@ -67,7 +67,7 @@ public class Hemisphere extends Figure {
 
     public static void writeFigureToFile(Hemisphere hemisphere) {
         try {
-            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\TempmyObjects.ser"));
+            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\Hemisphere.ser"));
             ObjectOutputStream o = new ObjectOutputStream(f);
 
             o.writeObject(hemisphere);

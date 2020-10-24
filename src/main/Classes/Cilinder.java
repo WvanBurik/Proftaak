@@ -1,6 +1,5 @@
 package main.Classes;
 
-
 import java.io.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -39,9 +38,6 @@ public class Cilinder extends Figure {
         return radius;
     }
 
-
-
-
     @Override
     public double calculateVolume(double... value) {
 
@@ -59,7 +55,7 @@ public class Cilinder extends Figure {
 
     public static void createCilinder(double height, double radius) throws SQLException, ClassNotFoundException {
         CilinderDAO cilinderDAO = new CilinderDAO();
-        cilinderDAO.insertCilinder(height, radius);
+        cilinderDAO.insertFigure(height, radius);
     }
 
     public static ArrayList readAllFigures() throws SQLException, ClassNotFoundException {

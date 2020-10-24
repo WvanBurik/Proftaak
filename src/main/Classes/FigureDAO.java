@@ -5,6 +5,8 @@ import java.util.ArrayList;
 
 public class FigureDAO {
 
+    //Select all Figures from DB
+    //Returns an ArrayList containing figures.
     public static ArrayList readAllFigures() throws SQLException, ClassNotFoundException {
         ArrayList<Figure> figures = new ArrayList<>();
 
@@ -23,6 +25,9 @@ public class FigureDAO {
         return figures;
     }
 
+
+    //Select all Figures From DB and adds all volumes together.
+    //Returns a double value of all volumes combined.
     public static double readAllFiguresForTotalVolume() throws SQLException, ClassNotFoundException {
         double totalVolume = 0;
 

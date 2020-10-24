@@ -1,6 +1,5 @@
 package main.Classes;
 
-import javafx.fxml.FXML;
 import main.DAB.DBUtil;
 import main.Interfaces.IDAO;
 import java.sql.ResultSet;
@@ -9,19 +8,6 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 public class BlockDAO implements IDAO {
-
-    public void insertBlock(double length, double width, double height) throws SQLException, ClassNotFoundException {
-        String uniqueID = UUID.randomUUID().toString();
-        String sql = "insert into block(ID, length, width, height) values('"+uniqueID+"', '"+length+"', '"+width+"', '"+height+"');";
-        try {
-            DBUtil.dbExecuteQuery(sql);
-        }
-        catch (SQLException e) {
-            System.out.println("Exception occur while inserting the data " + e);
-            e.printStackTrace();
-            throw e;
-        }
-    }
 
     @Override
     public void deleteFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
@@ -59,6 +45,20 @@ public class BlockDAO implements IDAO {
         return blocks;
     }
 
+    @Override
+    public void insertFigure(double... value) throws SQLException, ClassNotFoundException {
+        String uniqueID = UUID.randomUUID().toString();
+        String sql = "insert into block(ID, length, width, height) values('"+uniqueID+"', '"+ value[0] +"', '"+ value[1] +"', '"+ value[2] +"');";
+        try {
+            DBUtil.dbExecuteQuery(sql);
+        }
+        catch (SQLException e) {
+            System.out.println("Exception occur while inserting the data " + e);
+            e.printStackTrace();
+            throw e;
+        }
+    }
+
     public Block readFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
         String sql = "SELECT * FROM Block where ID = '" + selectedIdx + "';";
         Block block = new Block();
@@ -81,7 +81,4 @@ public class BlockDAO implements IDAO {
         return block;
     }
 
-    public void calculateVolume() {
-
-    }
 }
