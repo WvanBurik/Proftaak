@@ -198,7 +198,8 @@ public class Controller implements Initializable {
     }
     public void display() throws SQLException, ClassNotFoundException {
         Stage popupwindow=new Stage();
-        popupwindow.initModality(Modality.APPLICATION_MODAL);
+        //Modality must be set to WINDOW_MODAL to open multiple windows at once.
+        popupwindow.initModality(Modality.WINDOW_MODAL);
         popupwindow.setTitle("Figure specification");
 
         Button button1= new Button("Close");
@@ -214,7 +215,7 @@ public class Controller implements Initializable {
             } catch (ClassNotFoundException classNotFoundException) {
                 classNotFoundException.printStackTrace();
             }
-        }); //todo add function to this button
+        });
 
 
         VBox layout= new VBox(10);
