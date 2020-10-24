@@ -1,4 +1,6 @@
-package main.Classes;
+package main.classes;
+
+import main.dao.BlockDAO;
 
 import java.io.*;
 import java.sql.SQLException;
@@ -12,16 +14,16 @@ public class Block extends Figure {
     private double height;
 
     public Block(double length, double width, double height) {
-        this.length     = length;
-        this.width      = width;
-        this.height     = height;
+        this.length = length;
+        this.width = width;
+        this.height = height;
     }
 
     public Block(String id, double length, double width, double height) {
         this.id = id;
-        this.length     = length;
-        this.width      = width;
-        this.height     = height;
+        this.length = length;
+        this.width = width;
+        this.height = height;
     }
 
     public Block() {
@@ -45,11 +47,6 @@ public class Block extends Figure {
     public static Block readFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
         BlockDAO blockDAO = new BlockDAO();
         return blockDAO.readFigure(selectedIdx);
-    }
-
-    @Override
-    public String getType() {
-        return "Block";
     }
 
     public double getLength() {

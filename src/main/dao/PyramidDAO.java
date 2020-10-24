@@ -1,17 +1,18 @@
-package main.Classes;
+package main.dao;
 
 import main.DAB.DBUtil;
-import main.Interfaces.IDAO;
+import main.classes.Pyramid;
+import main.interfaces.FigureInterface;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.UUID;
 
-public class SphereDAO implements IDAO {
+public class PyramidDAO implements FigureInterface {
 
     @Override
     public void deleteFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
-        String sql = "DELETE FROM Sphere where id = '" + selectedIdx + "';";
+        String sql = "DELETE FROM Pyramid where id = '" + selectedIdx + "';";
         try {
             DBUtil.dbExecuteQuery(sql);
         } catch (SQLException e) {
@@ -23,29 +24,30 @@ public class SphereDAO implements IDAO {
 
     @Override
     public ArrayList readAllFigures() throws SQLException, ClassNotFoundException {
-        String sql = "SELECT * FROM Sphere;";
-        ArrayList<Sphere> spheres = new ArrayList<>();
+        String sql = "SELECT * FROM Pyramid;";
+        ArrayList<Pyramid> pyramids = new ArrayList<>();
 
         try {
             ResultSet rs = DBUtil.dbExecute(sql);
             while (rs.next()) {
                 String ID = rs.getString("ID");
-                double radius = rs.getDouble("radius");
-                Sphere sphere = new Sphere(ID, radius);
-                spheres.add(sphere);
+                double height = rs.getDouble("height");
+                double baseLength = rs.getDouble("baseLength");
+                Pyramid pyramid = new Pyramid(ID, height, baseLength);
+                pyramids.add(pyramid);
             }
-        } catch (SQLException | ClassNotFoundException e) {
+        } catch (SQLException e) {
             System.out.println("Exception occur while inserting the data " + e);
             e.printStackTrace();
             throw e;
         }
-        return spheres;
+        return pyramids;
     }
 
     @Override
     public void insertFigure(double... value) throws SQLException, ClassNotFoundException {
         String uniqueID = UUID.randomUUID().toString();
-        String sql = "insert into Sphere(ID, radius) values('" + uniqueID + "', '" + value[0] + "');";
+        String sql = "insert into Pyramid(ID, height, baseLength) values('" + uniqueID + "', '" + value[0] + "', '" + value[1] + "');";
         try {
             DBUtil.dbExecuteQuery(sql);
         } catch (SQLException e) {
@@ -55,23 +57,23 @@ public class SphereDAO implements IDAO {
         }
     }
 
-    public Sphere readFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
-        String sql = "SELECT * FROM Sphere where id = '" + selectedIdx + "';";
-        Sphere returnSphere = new Sphere();
+    public Pyramid readFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
+        String sql = "SELECT * FROM Pyramid where id = '" + selectedIdx + "';";
+        Pyramid pyramid = new Pyramid();
 
         try {
             ResultSet rs = DBUtil.dbExecute(sql);
             while (rs.next()) {
                 String ID = rs.getString("ID");
-                double radius = rs.getDouble("radius");
-                Sphere sphere = new Sphere(ID, radius);
-                returnSphere = sphere;
+                double height = rs.getDouble("height");
+                double baseLength = rs.getDouble("baseLength");
+                pyramid = new Pyramid(ID, height, baseLength);
             }
-        } catch (SQLException | ClassNotFoundException e) {
+        } catch (SQLException e) {
             System.out.println("Exception occur while inserting the data " + e);
             e.printStackTrace();
             throw e;
         }
-        return returnSphere;
+        return pyramid;
     }
 }

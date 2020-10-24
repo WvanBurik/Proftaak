@@ -1,9 +1,9 @@
-package main.Classes;
+package main.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import main.classes.Pyramid;
 
 import java.io.IOException;
 import java.sql.SQLException;

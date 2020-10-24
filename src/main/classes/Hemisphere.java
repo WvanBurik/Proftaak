@@ -1,4 +1,6 @@
-package main.Classes;
+package main.classes;
+
+import main.dao.HemisphereDAO;
 
 import java.io.*;
 import java.sql.SQLException;
@@ -19,11 +21,6 @@ public class Hemisphere extends Figure {
     }
 
     public Hemisphere() {
-    }
-
-    @Override
-    public String getType() {
-        return "Hemisphere";
     }
 
     public double getRadius() {

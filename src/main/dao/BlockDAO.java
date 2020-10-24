@@ -1,18 +1,18 @@
-package main.Classes;
+package main.dao;
 
 import main.DAB.DBUtil;
-import main.Interfaces.IDAO;
+import main.classes.Block;
+import main.interfaces.FigureInterface;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.UUID;
 
-public class CilinderDAO implements IDAO {
+public class BlockDAO implements FigureInterface {
 
     @Override
     public void deleteFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
-        String sql = "DELETE FROM Cilinder where ID = '" + selectedIdx + "';";
-
+        String sql = "DELETE FROM Block where ID = '" + selectedIdx + "';";
         try {
             DBUtil.dbExecuteQuery(sql);
         } catch (SQLException e) {
@@ -24,55 +24,62 @@ public class CilinderDAO implements IDAO {
 
     @Override
     public ArrayList readAllFigures() throws SQLException, ClassNotFoundException {
-        String sql = "SELECT * FROM Cilinder;";
-        ArrayList<Cilinder> cilinders = new ArrayList<>();
+        String sql = "SELECT * FROM Block;";
+        ArrayList<Block> blocks = new ArrayList<>();
 
         try {
             ResultSet rs = DBUtil.dbExecute(sql);
             while (rs.next()) {
                 String ID = rs.getString("ID");
+                double length = rs.getDouble("length");
+                double width = rs.getDouble("width");
                 double height = rs.getDouble("height");
-                double radius = rs.getDouble("radius");
-                Cilinder cilinder = new Cilinder(ID, height, radius);
-                cilinders.add(cilinder);
+                Block block = new Block(ID, length, width, height);
+                blocks.add(block);
             }
-        } catch (SQLException e) {
+        }
+        catch (SQLException e) {
             System.out.println("Exception occur while inserting the data " + e);
             e.printStackTrace();
             throw e;
         }
-        return cilinders;
+        return blocks;
     }
 
     @Override
     public void insertFigure(double... value) throws SQLException, ClassNotFoundException {
         String uniqueID = UUID.randomUUID().toString();
-        String sql = "insert into cilinder(ID, height, radius) values('" + uniqueID + "', '" + value[0] + "', '" + value[1] + "');";
+        String sql = "insert into block(ID, length, width, height) values('"+uniqueID+"', '"+ value[0] +"', '"+ value[1] +"', '"+ value[2] +"');";
         try {
             DBUtil.dbExecuteQuery(sql);
-        } catch (SQLException e) {
+        }
+        catch (SQLException e) {
             System.out.println("Exception occur while inserting the data " + e);
             e.printStackTrace();
             throw e;
         }
     }
-    public Cilinder readFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
-        String sql = "SELECT * FROM Cilinder where ID = '" + selectedIdx + "';";
-        Cilinder cilinder = new Cilinder();
+
+    public Block readFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
+        String sql = "SELECT * FROM Block where ID = '" + selectedIdx + "';";
+        Block block = new Block();
 
         try {
             ResultSet rs = DBUtil.dbExecute(sql);
             while (rs.next()) {
                 String ID = rs.getString("ID");
+                double length = rs.getDouble("length");
+                double width = rs.getDouble("width");
                 double height = rs.getDouble("height");
-                double radius = rs.getDouble("radius");
-                cilinder = new Cilinder(ID, height, radius);
+                block = new Block(ID, length, width, height);
             }
-        } catch (SQLException e) {
+        }
+        catch (SQLException e) {
             System.out.println("Exception occur while inserting the data " + e);
             e.printStackTrace();
             throw e;
         }
-        return cilinder;
+        return block;
     }
+
 }

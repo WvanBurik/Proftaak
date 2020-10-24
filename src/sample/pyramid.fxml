@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="157.0" prefWidth="469.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Classes.PyramidController">
+<AnchorPane prefHeight="157.0" prefWidth="469.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.PyramidController">
     <children>
         <TextField fx:id="height_pyr" layoutX="93.0" layoutY="47.0" prefHeight="25.0" prefWidth="81.0" />
         <Text layoutX="14.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Height" />

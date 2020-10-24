@@ -1,17 +1,18 @@
-package main.Classes;
+package main.dao;
 
 import main.DAB.DBUtil;
-import main.Interfaces.IDAO;
+import main.classes.Sphere;
+import main.interfaces.FigureInterface;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.UUID;
 
-public class HemisphereDAO implements IDAO {
+public class SphereDAO implements FigureInterface {
 
     @Override
     public void deleteFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
-        String sql = "DELETE FROM hemisphere where id = '" + selectedIdx + "';";
+        String sql = "DELETE FROM Sphere where id = '" + selectedIdx + "';";
         try {
             DBUtil.dbExecuteQuery(sql);
         } catch (SQLException e) {
@@ -23,29 +24,29 @@ public class HemisphereDAO implements IDAO {
 
     @Override
     public ArrayList readAllFigures() throws SQLException, ClassNotFoundException {
-        String sql = "SELECT * FROM hemisphere;";
-        ArrayList<Hemisphere> hemispheres = new ArrayList<>();
+        String sql = "SELECT * FROM Sphere;";
+        ArrayList<Sphere> spheres = new ArrayList<>();
 
         try {
             ResultSet rs = DBUtil.dbExecute(sql);
             while (rs.next()) {
                 String ID = rs.getString("ID");
                 double radius = rs.getDouble("radius");
-                Hemisphere hemisphere = new Hemisphere(ID, radius);
-                hemispheres.add(hemisphere);
+                Sphere sphere = new Sphere(ID, radius);
+                spheres.add(sphere);
             }
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             System.out.println("Exception occur while inserting the data " + e);
             e.printStackTrace();
             throw e;
         }
-        return hemispheres;
+        return spheres;
     }
 
     @Override
     public void insertFigure(double... value) throws SQLException, ClassNotFoundException {
         String uniqueID = UUID.randomUUID().toString();
-        String sql = "insert into hemisphere(ID, radius) values('" + uniqueID + "', '" + value[0] + "');";
+        String sql = "insert into Sphere(ID, radius) values('" + uniqueID + "', '" + value[0] + "');";
         try {
             DBUtil.dbExecuteQuery(sql);
         } catch (SQLException e) {
@@ -55,22 +56,23 @@ public class HemisphereDAO implements IDAO {
         }
     }
 
-    public Hemisphere readFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
-        String sql = "SELECT * FROM hemisphere where id = '" + selectedIdx + "';";
-        Hemisphere hemisphere = new Hemisphere();
+    public Sphere readFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
+        String sql = "SELECT * FROM Sphere where id = '" + selectedIdx + "';";
+        Sphere returnSphere = new Sphere();
 
         try {
             ResultSet rs = DBUtil.dbExecute(sql);
             while (rs.next()) {
                 String ID = rs.getString("ID");
                 double radius = rs.getDouble("radius");
-                hemisphere = new Hemisphere(ID, radius);
+                Sphere sphere = new Sphere(ID, radius);
+                returnSphere = sphere;
             }
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             System.out.println("Exception occur while inserting the data " + e);
             e.printStackTrace();
             throw e;
         }
-        return hemisphere;
+        return returnSphere;
     }
 }

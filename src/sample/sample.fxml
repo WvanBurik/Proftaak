@@ -26,8 +26,6 @@
             <MenuItem mnemonicParsing="false" onAction="#stageHemisphere" text="Hemisphere" />
         </items>
       </MenuButton>
-      <Button layoutX="504.0" layoutY="423.0" mnemonicParsing="false" text="Save" />
-      <Button layoutX="552.0" layoutY="423.0" mnemonicParsing="false" text="Load" />
       <Line endX="-54.5" endY="253.0" layoutX="360.0" layoutY="215.0" startX="-54.5" startY="-215.0" />
       <Button fx:id="calc_total_vol" layoutX="541.0" layoutY="361.0" mnemonicParsing="false" onAction="#showAllVolume" text="Calculate" />
       <Label layoutX="14.0" layoutY="105.0" text="All figures:" />
