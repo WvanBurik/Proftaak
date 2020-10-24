@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:Ammar" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a8e1ab99-b1c0-4fb1-9100-f0285afa5a7a" name="Default Changelist" comment="Last push before new structure edited">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Block.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Block.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/BlockDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/BlockDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Cilinder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Cilinder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/CilinderDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/CilinderDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Figure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Figure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Hemisphere.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Hemisphere.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/HemisphereDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/HemisphereDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Pyramid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Pyramid.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Sphere.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Classes/Sphere.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/main/Interfaces/IDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/main/Interfaces/IDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/sample/Cilinder.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/sample/Cilinder.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proftaak/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proftaak/sample/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Classes/Figure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Classes/Figure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Cilinder.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Cilinder.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/block.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/block.fxml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="b3b4c40864516e5bdee63c4d99391a70297c4595" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1iSceb185ez6V8YTREmjWB38W5H" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/sample" />
+    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="main.Classes" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Wes\Proftaak\src\sample" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sample.Main" />
+      <module name="Proftaak" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-14.0.2.1\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a8e1ab99-b1c0-4fb1-9100-f0285afa5a7a" name="Default Changelist" comment="" />
+      <created>1601904533314</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601904533314</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Two buttons added and GUI">
+      <created>1602103810395</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602103810396</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Last edit of the GUI and some functions">
+      <created>1602886793935</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602886793935</updated>
+    </task>
+    <task id="LOCAL-00003" summary="To test: all cilinders added to the listview.&#10;The method showAllFigures in Controller.java added to test">
+      <created>1603112794277</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603112794278</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Last update: GUI improvment and showallfigures.">
+      <created>1603195894899</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603195894899</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Last push before new structure edited">
+      <created>1603305096426</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1603305096427</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="Ammar" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Two buttons added and GUI" />
+    <MESSAGE value="All stages added" />
+    <MESSAGE value="Last edit of the GUI and some functions" />
+    <MESSAGE value="To test: all cilinders added to the listview.&#10;The method showAllFigures in Controller.java added to test" />
+    <MESSAGE value="Last update: GUI improvment and showallfigures." />
+    <MESSAGE value="Last push before new structure edited" />
+    <option name="LAST_COMMIT_MESSAGE" value="Last push before new structure edited" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="140" y="56" width="1086" height="856" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601904374317">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state x="140" y="56" width="1086" height="856" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1368.912@0.0.1368.912" timestamp="1601904374317" />
+    <state x="466" y="215" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1601903681304">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state x="466" y="215" key="#com.intellij.ide.macro.MacrosDialog/0.0.1368.912@0.0.1368.912" timestamp="1601903681304" />
+    <state x="490" y="172" key="#com.intellij.ide.util.MemberChooser" timestamp="1602887542734">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state x="490" y="172" key="#com.intellij.ide.util.MemberChooser/0.0.1368.912@0.0.1368.912" timestamp="1602887542734" />
+    <state x="415" y="295" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1601752467108">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state x="415" y="295" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1368.912@0.0.1368.912" timestamp="1601752467108" />
+    <state x="536" y="335" key="DBNavigator.ConnectionAuthenticationDialog" timestamp="1601905747376">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state x="536" y="335" key="DBNavigator.ConnectionAuthenticationDialog/0.0.1368.912@0.0.1368.912" timestamp="1601905747376" />
+    <state x="215" y="111" key="DBNavigator.ProjectSettingsDialog" timestamp="1601979330755">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state x="215" y="111" key="DBNavigator.ProjectSettingsDialog/0.0.1368.912@0.0.1368.912" timestamp="1601979330755" />
+    <state x="466" y="199" key="FileChooserDialogImpl" timestamp="1601992980012">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state x="466" y="199" key="FileChooserDialogImpl/0.0.1368.912@0.0.1368.912" timestamp="1601992980012" />
+    <state width="1326" height="187" key="GridCell.Tab.0.bottom" timestamp="1603382874116">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state width="1326" height="187" key="GridCell.Tab.0.bottom/0.0.1368.912@0.0.1368.912" timestamp="1603382874116" />
+    <state width="1326" height="187" key="GridCell.Tab.0.center" timestamp="1603382874115">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state width="1326" height="187" key="GridCell.Tab.0.center/0.0.1368.912@0.0.1368.912" timestamp="1603382874115" />
+    <state width="1326" height="187" key="GridCell.Tab.0.left" timestamp="1603382874115">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state width="1326" height="187" key="GridCell.Tab.0.left/0.0.1368.912@0.0.1368.912" timestamp="1603382874115" />
+    <state width="1326" height="187" key="GridCell.Tab.0.right" timestamp="1603382874115">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state width="1326" height="187" key="GridCell.Tab.0.right/0.0.1368.912@0.0.1368.912" timestamp="1603382874115" />
+    <state x="131" y="75" key="MergeDialog" timestamp="1602799706388">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state x="131" y="75" key="MergeDialog/0.0.1368.912@0.0.1368.912" timestamp="1602799706388" />
+    <state x="323" y="218" key="MultipleFileMergeDialog" timestamp="1602799713653">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state x="323" y="218" key="MultipleFileMergeDialog/0.0.1368.912@0.0.1368.912" timestamp="1602799713653" />
+    <state x="520" y="159" key="RollbackChangesDialog" timestamp="1602799956836">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state x="520" y="159" key="RollbackChangesDialog/0.0.1368.912@0.0.1368.912" timestamp="1602799956836" />
+    <state x="165" y="31" key="SettingsEditor" timestamp="1602800240144">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state x="165" y="31" key="SettingsEditor/0.0.1368.912@0.0.1368.912" timestamp="1602800240144" />
+    <state x="277" y="176" key="Vcs.Push.Dialog.v2" timestamp="1603305100929">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state x="277" y="176" key="Vcs.Push.Dialog.v2/0.0.1368.912@0.0.1368.912" timestamp="1603305100929" />
+    <state x="499" y="234" key="chooseDestDirectoryDialog" timestamp="1601903908081">
+      <screen x="0" y="0" width="1368" height="912" />
+    </state>
+    <state x="499" y="234" key="chooseDestDirectoryDialog/0.0.1368.912@0.0.1368.912" timestamp="1601903908081" />
+  </component>
+</project>

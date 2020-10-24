@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="157.0" prefWidth="469.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.SphereController">
+    <children>
+        <TextField fx:id="radius_sph" layoutX="58.0" layoutY="47.0" prefHeight="25.0" prefWidth="81.0" />
+        <Text layoutX="14.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Radius" />
+        <Button layoutX="334.0" layoutY="118.0" mnemonicParsing="false" onAction="#insertSphere" text="Ok" />
+        <Button layoutX="374.0" layoutY="118.0" mnemonicParsing="false" onAction="#cancelStage" text="Cancel" />
+        <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose radius of the new sphere:" />
+    </children>
+</AnchorPane>
