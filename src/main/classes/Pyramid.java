@@ -1,4 +1,6 @@
-package main.Classes;
+package main.classes;
+
+import main.dao.PyramidDAO;
 
 import java.io.*;
 import java.sql.SQLException;
@@ -21,11 +23,6 @@ public class Pyramid extends Figure {
     }
 
     public Pyramid() {
-    }
-
-    @Override
-    public String getType() {
-        return "Pyramid";
     }
 
     public double getHeight() {

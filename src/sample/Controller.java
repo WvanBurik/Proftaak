@@ -17,7 +17,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import main.Classes.*;
+import main.classes.*;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
@@ -36,7 +36,7 @@ public class Controller implements Initializable {
 
     public void showAllFigures() throws SQLException, ClassNotFoundException {
         ObservableList<String> items = FXCollections.observableArrayList();
-        ArrayList<Figure> figures = FigureDAO.readAllFigures();
+        ArrayList<Figure> figures = Figure.readAllFigures();
                 show_all.setItems(items);
                 for (Figure f : figures) {
                     items.add(f.toString());
@@ -48,7 +48,7 @@ public class Controller implements Initializable {
 
     public void showAllVolume() throws SQLException, ClassNotFoundException {
 
-        double totalVolume = FigureDAO.readAllFiguresForTotalVolume();
+        double totalVolume = Figure.readAllFiguresForTotalVolume();
         total_volume_all.setText(String.valueOf(totalVolume));
     }
     public void showVolume() throws SQLException, ClassNotFoundException {
@@ -205,7 +205,6 @@ public class Controller implements Initializable {
         Button button1= new Button("Close");
         button1.setOnAction(e -> popupwindow.close());
         Button button2= new Button("Write to File");
-//        button2.setOnAction(e -> System.exit(0)); //todo add function to this button
 
         button2.setOnAction(e -> {
             try {
@@ -224,17 +223,6 @@ public class Controller implements Initializable {
         layout.setAlignment(Pos.CENTER);
         Scene scene1= new Scene(layout, 500, 250);
         popupwindow.setScene(scene1);
-//       int selectedIdx = show_all.getSelectionModel().getSelectedIndex();
-//        show_all.getSelectionModel().selectedItemProperty();
-//        System.out.println(show_all.getSelectionModel().selectedItemProperty());
-
-
-
         popupwindow.showAndWait();
-        
-        
-
-//        show_all.getItems().remove(selectedIdx);
-
     }
 }

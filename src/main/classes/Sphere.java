@@ -1,4 +1,6 @@
-package main.Classes;
+package main.classes;
+
+import main.dao.SphereDAO;
 
 import java.io.*;
 import java.sql.SQLException;
@@ -19,11 +21,6 @@ public class Sphere extends Figure {
     }
 
     public Sphere() {
-    }
-
-    @Override
-    public String getType() {
-        return "Sphere";
     }
 
     public double getRadius() {

@@ -1,17 +1,18 @@
-package main.Classes;
+package main.dao;
 
 import main.DAB.DBUtil;
-import main.Interfaces.IDAO;
+import main.classes.Hemisphere;
+import main.interfaces.FigureInterface;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.UUID;
 
-public class BlockDAO implements IDAO {
+public class HemisphereDAO implements FigureInterface {
 
     @Override
     public void deleteFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
-        String sql = "DELETE FROM Block where ID = '" + selectedIdx + "';";
+        String sql = "DELETE FROM hemisphere where id = '" + selectedIdx + "';";
         try {
             DBUtil.dbExecuteQuery(sql);
         } catch (SQLException e) {
@@ -23,62 +24,54 @@ public class BlockDAO implements IDAO {
 
     @Override
     public ArrayList readAllFigures() throws SQLException, ClassNotFoundException {
-        String sql = "SELECT * FROM Block;";
-        ArrayList<Block> blocks = new ArrayList<>();
+        String sql = "SELECT * FROM hemisphere;";
+        ArrayList<Hemisphere> hemispheres = new ArrayList<>();
 
         try {
             ResultSet rs = DBUtil.dbExecute(sql);
             while (rs.next()) {
                 String ID = rs.getString("ID");
-                double length = rs.getDouble("length");
-                double width = rs.getDouble("width");
-                double height = rs.getDouble("height");
-                Block block = new Block(ID, length, width, height);
-                blocks.add(block);
+                double radius = rs.getDouble("radius");
+                Hemisphere hemisphere = new Hemisphere(ID, radius);
+                hemispheres.add(hemisphere);
             }
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             System.out.println("Exception occur while inserting the data " + e);
             e.printStackTrace();
             throw e;
         }
-        return blocks;
+        return hemispheres;
     }
 
     @Override
     public void insertFigure(double... value) throws SQLException, ClassNotFoundException {
         String uniqueID = UUID.randomUUID().toString();
-        String sql = "insert into block(ID, length, width, height) values('"+uniqueID+"', '"+ value[0] +"', '"+ value[1] +"', '"+ value[2] +"');";
+        String sql = "insert into hemisphere(ID, radius) values('" + uniqueID + "', '" + value[0] + "');";
         try {
             DBUtil.dbExecuteQuery(sql);
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             System.out.println("Exception occur while inserting the data " + e);
             e.printStackTrace();
             throw e;
         }
     }
 
-    public Block readFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
-        String sql = "SELECT * FROM Block where ID = '" + selectedIdx + "';";
-        Block block = new Block();
+    public Hemisphere readFigure(String selectedIdx) throws SQLException, ClassNotFoundException {
+        String sql = "SELECT * FROM hemisphere where id = '" + selectedIdx + "';";
+        Hemisphere hemisphere = new Hemisphere();
 
         try {
             ResultSet rs = DBUtil.dbExecute(sql);
             while (rs.next()) {
                 String ID = rs.getString("ID");
-                double length = rs.getDouble("length");
-                double width = rs.getDouble("width");
-                double height = rs.getDouble("height");
-                block = new Block(ID, length, width, height);
+                double radius = rs.getDouble("radius");
+                hemisphere = new Hemisphere(ID, radius);
             }
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             System.out.println("Exception occur while inserting the data " + e);
             e.printStackTrace();
             throw e;
         }
-        return block;
+        return hemisphere;
     }
-
 }
