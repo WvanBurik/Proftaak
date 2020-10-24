@@ -18,7 +18,6 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import main.Classes.*;
-
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
@@ -205,13 +204,15 @@ public class Controller implements Initializable {
 
         Button button1= new Button("Close");
         button1.setOnAction(e -> popupwindow.close());
+        Button button2= new Button("Write to File");
+        button2.setOnAction(e -> System.exit(0)); //todo add function to this button
         VBox layout= new VBox(10);
         Label label1= new Label(show_all.getSelectionModel().getSelectedItem());
-        layout.getChildren().addAll(label1, button1);
+        layout.getChildren().addAll(label1, button1, button2);
         layout.setAlignment(Pos.CENTER);
         Scene scene1= new Scene(layout, 500, 250);
         popupwindow.setScene(scene1);
-       int selectedIdx = show_all.getSelectionModel().getSelectedIndex();
+//       int selectedIdx = show_all.getSelectionModel().getSelectedIndex();
 //        show_all.getSelectionModel().selectedItemProperty();
 //        System.out.println(show_all.getSelectionModel().selectedItemProperty());
 
