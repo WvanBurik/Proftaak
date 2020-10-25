@@ -74,7 +74,7 @@ public class Block extends Figure {
 
     public static void writeFigureToFile(Block block) {
         try {
-            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\Block.ser"));
+            FileOutputStream f = new FileOutputStream(new File("D:\\Block.ser"));
             ObjectOutputStream o = new ObjectOutputStream(f);
 
             o.writeObject(block);
@@ -92,7 +92,7 @@ public class Block extends Figure {
 
     private static void writeFigureToTxt(Block block) {
         try {
-            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\Block.txt"));
+            FileOutputStream f = new FileOutputStream(new File("D:\\Block.txt"));
             ObjectOutputStream o = new ObjectOutputStream(f);
 
             o.writeObject(block);

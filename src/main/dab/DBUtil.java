@@ -1,4 +1,4 @@
-package main.DAB;
+package main.dab;
 
 import javax.sql.rowset.CachedRowSet;
 import java.sql.*;

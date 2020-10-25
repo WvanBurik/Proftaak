@@ -74,7 +74,7 @@ public class Pyramid extends Figure {
 
     public static void writeFigureToFile(Pyramid pyramid) {
         try {
-            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\Pyramid.ser"));
+            FileOutputStream f = new FileOutputStream(new File("D:\\Pyramid.ser"));
             ObjectOutputStream o = new ObjectOutputStream(f);
 
             o.writeObject(pyramid);
@@ -92,7 +92,7 @@ public class Pyramid extends Figure {
 
     private static void writeFigureToTxt(Pyramid pyramid) {
         try {
-            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\Pyramid.txt"));
+            FileOutputStream f = new FileOutputStream(new File("D:\\Pyramid.txt"));
             ObjectOutputStream o = new ObjectOutputStream(f);
 
             o.writeObject(pyramid);

@@ -64,7 +64,7 @@ public class Hemisphere extends Figure {
 
     public static void writeFigureToFile(Hemisphere hemisphere) {
         try {
-            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\Hemisphere.ser"));
+            FileOutputStream f = new FileOutputStream(new File("D:\\Hemisphere.ser"));
             ObjectOutputStream o = new ObjectOutputStream(f);
 
             o.writeObject(hemisphere);
@@ -83,7 +83,7 @@ public class Hemisphere extends Figure {
     private static void writeFigureToTxt(Hemisphere hemisphere) {
 
         try {
-            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\Hemisphere.txt"));
+            FileOutputStream f = new FileOutputStream(new File("D:\\Hemisphere.txt"));
             ObjectOutputStream o = new ObjectOutputStream(f);
 
             o.writeObject(hemisphere);

@@ -1,6 +1,6 @@
 package main.dao;
 
-import main.DAB.DBUtil;
+import main.dab.DBUtil;
 import main.classes.Pyramid;
 import main.interfaces.FigureInterface;
 import java.sql.ResultSet;

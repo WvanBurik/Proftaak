@@ -64,7 +64,7 @@ public class Sphere extends Figure {
 
     public static void writeFigureToFile(Sphere sphere) {
         try {
-            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\Sphere.ser"));
+            FileOutputStream f = new FileOutputStream(new File("D:\\Sphere.ser"));
             ObjectOutputStream o = new ObjectOutputStream(f);
 
             o.writeObject(sphere);
@@ -82,7 +82,7 @@ public class Sphere extends Figure {
 
     private static void writeFigureToTxt(Sphere sphere) {
         try {
-            FileOutputStream f = new FileOutputStream(new File("C:\\Users\\WesleyB\\Documents\\Sphere.txt"));
+            FileOutputStream f = new FileOutputStream(new File("D:\\Sphere.txt"));
             ObjectOutputStream o = new ObjectOutputStream(f);
 
             o.writeObject(sphere);

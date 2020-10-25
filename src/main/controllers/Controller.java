@@ -1,4 +1,4 @@
-package sample;
+package main.controllers;
 
 
 import javafx.collections.FXCollections;
@@ -131,7 +131,7 @@ public class Controller implements Initializable {
 
 
     public void stageCilinder(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("cilinder.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/main/design/Cilinder.fxml"));
         Parent root = fxmlLoader.load();
         Stage stage = new Stage();
         stage.initModality(Modality.APPLICATION_MODAL);
@@ -142,7 +142,7 @@ public class Controller implements Initializable {
     }
 
     public void stageBlock(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("block.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/main/design/block.fxml"));
         Parent root = fxmlLoader.load();
         Stage stage = new Stage();
         stage.initModality(Modality.APPLICATION_MODAL);
@@ -153,7 +153,7 @@ public class Controller implements Initializable {
     }
 
     public void stageHemisphere(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("hemisphere.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/main/design/hemisphere.fxml"));
         Parent root = fxmlLoader.load();
         Stage stage = new Stage();
         stage.initModality(Modality.APPLICATION_MODAL);
@@ -164,7 +164,7 @@ public class Controller implements Initializable {
     }
 
     public void stageSphere(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sphere.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/main/design/sphere.fxml"));
         Parent root = fxmlLoader.load();
         Stage stage = new Stage();
         stage.initModality(Modality.APPLICATION_MODAL);
@@ -175,7 +175,7 @@ public class Controller implements Initializable {
     }
 
     public void stagePyramid(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("pyramid.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/main/design/pyramid.fxml"));
         Parent root = fxmlLoader.load();
         Stage stage = new Stage();
         stage.initModality(Modality.APPLICATION_MODAL);
